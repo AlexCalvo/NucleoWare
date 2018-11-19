@@ -1,0 +1,21 @@
+Feature: Registrar Usuario
+        As an administrator
+        I want to insert a new user into the system
+
+        Background:
+                Given we are an administrator
+                And we enter to the application
+                And the child hasn't been registered into the application before
+
+        Scenario: Fill in the fields
+                Given we are in the application as an administrator
+                Then we fill the Nickname field
+                Then we fill the Contraseña field
+                Then we fill the Nombre field
+                Then we fill the Apellidos field
+                Then we fill the Fecha de Nacimiento field
+                Then we fill the Rol field
+
+        Scenario: Fill in the fields with incorrect data
+                When we fill in a field with incorrect information
+                Then the insertion is not successful
