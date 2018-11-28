@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="EMBOLSAR" directorySegmentName="seg_0" id="52C7E1DD-C277-A43A-E88E-EB2AEC512688">
+<createdBy>José Ángel</createdBy>
+<createdTime>2018-11-27 09:25:50 UTC</createdTime>
+<ownerDesignName>NUCLEHONDURAS</ownerDesignName>
+<engineerTo>
+<item key="3A4B17BB-D95B-2131-EB7E-766BC3DFCBB2" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnSource>EMBOLSA</nameOnSource>
+<nameOnTarget>EMBOLSADOS POR</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>A713383E-A385-9CF2-D9A3-05A7B86C1E0F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D92E66E2-E217-9E72-FC99-3E127DC351A3</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

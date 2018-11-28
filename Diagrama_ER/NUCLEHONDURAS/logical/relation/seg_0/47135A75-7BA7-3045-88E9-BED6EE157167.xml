@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="SUPERVISAR" directorySegmentName="seg_0" id="47135A75-7BA7-3045-88E9-BED6EE157167">
+<createdBy>José Ángel</createdBy>
+<createdTime>2018-11-27 09:04:38 UTC</createdTime>
+<ownerDesignName>NUCLEHONDURAS</ownerDesignName>
+<engineerTo>
+<item key="3A4B17BB-D95B-2131-EB7E-766BC3DFCBB2" value="true"/>
+</engineerTo>
+<sourcePk>60CD421E-5636-EF50-E328-FE747E580A3E</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>SUPERVISA</nameOnSource>
+<nameOnTarget>ES SUPERVISADO POR</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7D3A717D-ADB9-E252-A730-6B67A7050E96</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B2ADD47D-57CC-F6DB-B38B-77323A4141D3</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

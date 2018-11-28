@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="NUCLEHONDURAS" id="7BE68D5E-6CB8-4D5A-31E5-C166834109BD" version="3.5">
+<createdBy>José Ángel</createdBy>
+<createdTime>2018-11-27 08:35:10 UTC</createdTime>
+<ownerDesignName>NUCLEHONDURAS</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>7BE68D5E-6CB8-4D5A-31E5-C166834109BD</designId>
+</OSDM_Design>

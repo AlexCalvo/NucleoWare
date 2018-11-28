@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FORMA_PARTE_DE" directorySegmentName="seg_0" id="404A884C-11D7-CCDB-74B4-F715201D4DF0">
+<createdBy>José Ángel</createdBy>
+<createdTime>2018-11-27 08:55:27 UTC</createdTime>
+<ownerDesignName>NUCLEHONDURAS</ownerDesignName>
+<engineerTo>
+<item key="3A4B17BB-D95B-2131-EB7E-766BC3DFCBB2" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnSource>FORMA PARTE DE</nameOnSource>
+<nameOnTarget>ESTA FORMADO POR</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>03DACB20-B195-C0B9-D1C0-04E616802397</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A713383E-A385-9CF2-D9A3-05A7B86C1E0F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ES APADRINADO" directorySegmentName="seg_0" id="0C5D46ED-EFA1-D859-03C4-EB2BEB24F21F">
+<createdBy>José Ángel</createdBy>
+<createdTime>2018-11-27 09:13:40 UTC</createdTime>
+<ownerDesignName>NUCLEHONDURAS</ownerDesignName>
+<engineerTo>
+<item key="3A4B17BB-D95B-2131-EB7E-766BC3DFCBB2" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnSource>ES APADRINADO</nameOnSource>
+<nameOnTarget>APADRINADO</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B2ADD47D-57CC-F6DB-B38B-77323A4141D3</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>F8DBDA5E-9E0C-8628-A2A3-1CE744110B42</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

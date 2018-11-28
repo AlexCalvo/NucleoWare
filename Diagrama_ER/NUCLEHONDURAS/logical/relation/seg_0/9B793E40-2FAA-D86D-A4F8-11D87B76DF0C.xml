@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="APADRINA" directorySegmentName="seg_0" id="9B793E40-2FAA-D86D-A4F8-11D87B76DF0C">
+<createdBy>José Ángel</createdBy>
+<createdTime>2018-11-27 09:15:17 UTC</createdTime>
+<ownerDesignName>NUCLEHONDURAS</ownerDesignName>
+<engineerTo>
+<item key="3A4B17BB-D95B-2131-EB7E-766BC3DFCBB2" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnSource>APADRINA</nameOnSource>
+<nameOnTarget>PADRINO</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>374D6B67-EDD0-54A3-2381-E3A8AFDCD2B5</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F8DBDA5E-9E0C-8628-A2A3-1CE744110B42</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

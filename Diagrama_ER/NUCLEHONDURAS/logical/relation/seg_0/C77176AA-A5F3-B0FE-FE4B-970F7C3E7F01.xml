@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PERTENECER" directorySegmentName="seg_0" id="C77176AA-A5F3-B0FE-FE4B-970F7C3E7F01">
+<createdBy>José Ángel</createdBy>
+<createdTime>2018-11-27 09:02:36 UTC</createdTime>
+<ownerDesignName>NUCLEHONDURAS</ownerDesignName>
+<engineerTo>
+<item key="3A4B17BB-D95B-2131-EB7E-766BC3DFCBB2" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnSource>ESTA COMPUESTA</nameOnSource>
+<nameOnTarget>PERTENECE</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>4397318C-5809-1F57-C319-CB83AE423628</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B2ADD47D-57CC-F6DB-B38B-77323A4141D3</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
