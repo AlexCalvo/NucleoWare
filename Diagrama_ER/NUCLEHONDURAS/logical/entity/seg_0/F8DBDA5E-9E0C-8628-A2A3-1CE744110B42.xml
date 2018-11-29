@@ -14,4 +14,20 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID_becado" id="DC20F28F-72A3-E54F-74A3-906D9BEDBBF4">
+<createdBy>Hp</createdBy>
+<createdTime>2018-11-29 11:40:10 UTC</createdTime>
+<generatorID>0C5D46ED-EFA1-D859-03C4-EB2BEB24F21F</generatorID>
+<ownerDesignName>NUCLEHONDURAS</ownerDesignName>
+<engineerTo>
+<item key="3A4B17BB-D95B-2131-EB7E-766BC3DFCBB2" value="true"/>
+</engineerTo>
+<referedAttribute>75762F97-9226-D3C4-B7E0-232D91BDB6AC</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
 </Entity>

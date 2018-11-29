@@ -14,4 +14,45 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_colonia" id="D61E53EB-F83D-2218-EE7B-82A79680CD56">
+<createdBy>Hp</createdBy>
+<createdTime>2018-11-29 11:30:52 UTC</createdTime>
+<ownerDesignName>NUCLEHONDURAS</ownerDesignName>
+<engineerTo>
+<item key="3A4B17BB-D95B-2131-EB7E-766BC3DFCBB2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="CEB1C818-E9B6-196A-B545-147C2E387CF8">
+<createdBy>Hp</createdBy>
+<createdTime>2018-11-29 11:31:28 UTC</createdTime>
+<ownerDesignName>NUCLEHONDURAS</ownerDesignName>
+<engineerTo>
+<item key="3A4B17BB-D95B-2131-EB7E-766BC3DFCBB2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descripcion" id="240116EC-3FA0-6A72-9209-03ACE106F37A">
+<createdBy>Hp</createdBy>
+<createdTime>2018-11-29 11:34:42 UTC</createdTime>
+<ownerDesignName>NUCLEHONDURAS</ownerDesignName>
+<engineerTo>
+<item key="3A4B17BB-D95B-2131-EB7E-766BC3DFCBB2" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40 CHAR</dataTypeSize>
+<ownDataTypeParameters>40 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
 </Entity>

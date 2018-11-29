@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B2ADD47D-57CC-F6DB-B38B-77323A4141D3" name="NIÑO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B2ADD47D-57CC-F6DB-B38B-77323A4141D3" name="BECADO">
 <createdBy>José Ángel</createdBy>
 <createdTime>2018-11-27 08:36:52 UTC</createdTime>
 <ownerDesignName>NUCLEHONDURAS</ownerDesignName>
@@ -28,5 +28,57 @@
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ID_becado" id="75762F97-9226-D3C4-B7E0-232D91BDB6AC">
+<createdBy>Hp</createdBy>
+<createdTime>2018-11-29 11:37:28 UTC</createdTime>
+<ownerDesignName>NUCLEHONDURAS</ownerDesignName>
+<engineerTo>
+<item key="3A4B17BB-D95B-2131-EB7E-766BC3DFCBB2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="7DAE4A20-4539-C8FD-A4E3-58A5A467A3A3">
+<createdBy>Hp</createdBy>
+<createdTime>2018-11-29 11:37:49 UTC</createdTime>
+<ownerDesignName>NUCLEHONDURAS</ownerDesignName>
+<engineerTo>
+<item key="3A4B17BB-D95B-2131-EB7E-766BC3DFCBB2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="apellidos" id="DDE16170-1392-29F1-D0C3-AEB1EC78987D">
+<createdBy>Hp</createdBy>
+<createdTime>2018-11-29 11:41:27 UTC</createdTime>
+<ownerDesignName>NUCLEHONDURAS</ownerDesignName>
+<engineerTo>
+<item key="3A4B17BB-D95B-2131-EB7E-766BC3DFCBB2" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DC2DCAE7-74F4-BA1D-E2E5-D81F3D4CE7DF" name="BECADO PK">
+<createdBy>Hp</createdBy>
+<createdTime>2018-11-29 11:37:45 UTC</createdTime>
+<ownerDesignName>NUCLEHONDURAS</ownerDesignName>
+<engineerTo>
+<item key="3A4B17BB-D95B-2131-EB7E-766BC3DFCBB2" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>75762F97-9226-D3C4-B7E0-232D91BDB6AC</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>
