@@ -1,0 +1,21 @@
+Feature: Registrar socio
+	As a user
+	I want to insert a new partner
+
+	Background:
+		Given we are a agent or administrator
+		And we enter to application
+		And the partner hasn't been registered into the application before
+
+	Scenario: Fill in the fields
+		Then we fill the Nombre field
+		Then we fill the Apellidos field
+		Then we fill the DNI field
+		Then we fill the ID_Socio field
+		Then the insertion is succesfull
+
+	Scenario: Fill in the fields with incorrect data
+		When we fill in a field with incorrect information
+		Then the insertion is not successfull
+
+	

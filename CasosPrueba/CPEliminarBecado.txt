@@ -1,0 +1,13 @@
+Feature: Eliminar becado
+	As a user
+	I want to delete a child from the system
+	
+	Background:
+		Given we are a agent or administrator
+		And we enter to application
+		And the child is registered into the application
+
+	Scenario: Delete the child from the application
+		Given we are in the application as an agent or administrator
+		When we delete the child from the data base
+		Then the child isn't in the data base now

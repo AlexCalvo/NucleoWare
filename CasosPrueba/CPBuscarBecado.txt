@@ -1,0 +1,13 @@
+Feature: Buscar becado
+	As a user
+	I want to search a child in the system
+
+	Background:
+		Given we are a agent or administrator
+		And we enter to application
+		And the child is registered into the application
+
+	Scenario: Search a child in the application
+		Given we are in the application as an agent or administrator
+		When we insert the codigo of the child
+		Then the application show us all the information about the child

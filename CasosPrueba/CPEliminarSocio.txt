@@ -1,0 +1,13 @@
+Feature: Eliminar socio
+	As a user
+	I want to delete a partner from the system
+	
+	Background:
+		Given we are a agent or administrator
+		And we enter to application
+		And the partner is registered into the application
+
+	Scenario: Delete the partner from the application
+		Given we are in the application as an agent or administrator
+		When we delete the partner from the data base
+		Then the partner isn't in the data base now

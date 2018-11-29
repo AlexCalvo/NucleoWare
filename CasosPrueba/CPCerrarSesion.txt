@@ -1,0 +1,13 @@
+Feature: Cerrar Sesion
+      As an user
+      I want to log out in the application
+
+      Background:
+              Given we are an user
+              And we are already registered into the application
+	      And we are alredy Logged into the application
+
+      Scenario: Log into the application
+              Given we are logged into the application
+              When we press the CerrarSesion button
+              Then the Log Out was successful

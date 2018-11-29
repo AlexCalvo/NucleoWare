@@ -1,0 +1,32 @@
+Feature: Registrar becado
+	As a user
+	I want to insert a new child into the system
+	
+	Background:
+		Given we are a agent or administrator
+		And we enter to application
+		And the child hasn't been registered into the application before
+
+	Scenario: Fill in the fields
+		Given we are in the application as an agent or administrator
+		Then we fill the Nombre field
+		Then we fill the Apellidos field
+		Then we fill the Codigo field
+		Then we fill the Estado field
+		Then we fill the Sexo field
+		Then we fill the Fecha de nacimiento field
+		Then we fill the Fecha de entrada field
+		Then we fill the Proyecto donde actua field
+		Then we fill the Fecha de alta en el proyecto field
+		Then we fill the Fecha de salida en el proyecto field
+		Then we fill the Fecha de salida de Acoes field
+		Then we fill the Grado del curso field
+		Then we fill the Colonia de procedencia field
+		Then we fill the Colonia actual field
+		Then we fill the Observaciones field
+		Then the insertion is succesfull
+
+	Scenario: Fill in the fields with incorrect data
+		When we fill in a field with incorrect information
+		Then the insertion is not successfull
+
