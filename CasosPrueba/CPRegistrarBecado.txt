@@ -9,6 +9,8 @@ Feature: Registrar becado
 
 	Scenario: Fill in the fields
 		Given we are in the application as an agent or administrator
+		Given
+		And
 		Then we fill the Nombre field
 		Then we fill the Apellidos field
 		Then we fill the Codigo field
