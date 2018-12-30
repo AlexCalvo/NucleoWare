@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>NucleoWare</title>
+</head>
+<body>
+	<h1>NucleoWare</h1>
+	<br>
+	<div sec:authorize="isAuthenticated()">
+		<div>
+			Bienvenido a NucleoWare, estás logueado con el usuario <b sec:authentication="name"></b>
+		</div>
+		<form th:action="@{/logout}" method="post">
+			<input type="submit" value="Logout" />
+		</form>
+	</div>
+
+	<div sec:authorize="isAnonymous()">
+		<div>No estás logueado</div>
+		<a href="/login">Login</a>
+	</div>
+
+	<div sec:authorize="isAuthenticated()">
+		<h1>Opciones</h1>
+		<div>
+			<a href="/becados"> Gestión de becados </a>
+		</div>
+		<div>
+			<a href="/socios"> Gestión de socios </a>
+		</div>
+		<div>
+			<a href="/usuarios"> Gestión de usuarios </a>
+		</div>
+		<div>
+			<a href="/apadrinamientos"> Gestión de apadrinamientos </a>
+		</div>
+	</div>
+
+	<br>
+
+</body>
+</html>
