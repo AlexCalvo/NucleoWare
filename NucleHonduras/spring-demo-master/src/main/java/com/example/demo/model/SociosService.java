@@ -20,10 +20,12 @@ public class SociosService {
 		return socioRepository.getOne(id);
 	}
 	
+	//Añadir
 	public void add(Socios socio) {
-		socioRepository.save(socio);
+		socioRepository.saveAndFlush(socio);
 	}
 	
+	//Editar
 	public void update(Socios socio) {
 		Socios p = socioRepository.getOne(socio.getDni());
 		p.setApellido(socio.getApellido());
@@ -31,6 +33,7 @@ public class SociosService {
 		socioRepository.saveAndFlush(p);
 	}
 	
+	//Borrar
 	public void delete(String dni) {
 		socioRepository.deleteById(dni);
 	}

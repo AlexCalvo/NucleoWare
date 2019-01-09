@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="spring-demo-master/src/main/java"/>
+	<classpathentry kind="src" path="spring-demo-master/src/test/java"/>
+	<classpathentry kind="lib" path="__MACOSX/spring-demo-master/.mvn/wrapper/._maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="spring-demo-master/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="spring-demo-master/bin/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,7 +1,9 @@
 package com.example.demo.model;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class BecadosService {
 
 	/*---Interfaz para la gestion de datos de Socios---*/
@@ -12,8 +14,8 @@ public class BecadosService {
 		return becadosRepository.findAll();
 	}
 	
-	public Becados getById(String id_becado) {
-		return becadosRepository.getOne(id_becado);
+	public Becados getById(String id) {
+		return becadosRepository.getOne(id);
 	}
 	
 	public void add(Becados becado) {
@@ -32,8 +34,8 @@ public class BecadosService {
 		becadosRepository.saveAndFlush(b);
 	}
 	
-	public void delete(String id_becado) {
-		becadosRepository.deleteById(id_becado);
+	public void delete(String id) {
+		becadosRepository.deleteById(id);
 	}
 	
 }

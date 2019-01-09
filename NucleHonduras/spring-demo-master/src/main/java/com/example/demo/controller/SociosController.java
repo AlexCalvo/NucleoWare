@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.example.demo.model.Socios;
 import com.example.demo.model.SociosService;
 
-//Controlador de los objetos Persona
+//Controlador de los objetos Socios
 @Controller
 public class SociosController {
 
@@ -24,7 +24,7 @@ public class SociosController {
 	/*---Devuelve el template de personas---*/
 	@GetMapping("/socios")
 	public String listPersonView(Model model) {
-		model.addAttribute("personas", socioService.getAll());
+		model.addAttribute("socios", socioService.getAll());
 		// devuelvo el template socios
 		return "socios";
 	}
@@ -38,11 +38,11 @@ public class SociosController {
 	}
 
 	/*---Devuelve el formulario para editar una persona---*/
-	@GetMapping("/socios/edit/{id}")
-	public String editPersonView(@PathVariable("id") String id, Model model) {
-		model.addAttribute("id", id);
-		model.addAttribute("persona", socioService.getByDni(id));
-		return "updatePersona";
+	@GetMapping("/socios/edit/{dni}")
+	public String editPersonView(@PathVariable("dni") String id, Model model) {
+		model.addAttribute("dni", id);
+		model.addAttribute("socios", socioService.getByDni(id));
+		return "updateSocio";
 	}
 
 	/*---Anade un nuevo socio al sistema---*/
@@ -57,18 +57,18 @@ public class SociosController {
 		return listPersonView(model);
 	}
 	
-	/*---Busca un Socio del sistema---
-	@PostMapping("/socios")
-	public String save(@Valid Socios persona, BindingResult result, Model model) {
+	/*---Actualiza un nuevo socio del sistema---*/
+	@PostMapping("/socios/edit")
+	public String update(@Valid Socios socio, BindingResult result, Model model) {
 		try {
-			personaService.add(persona);
-			model.addAttribute("create", true);
+			socioService.update(socio);
+			model.addAttribute("udpate", true);
 		} catch (Exception er) {
-			model.addAttribute("create", false);
+			model.addAttribute("update", false);
 		}
 		return listPersonView(model);
-	}*/
-
+	}
+	
 	/*---Elimina un Socio a partir de su ID---*/
 	@DeleteMapping("/socios/{id}")
 	public String delete(@PathVariable("id") String id, Model model) {

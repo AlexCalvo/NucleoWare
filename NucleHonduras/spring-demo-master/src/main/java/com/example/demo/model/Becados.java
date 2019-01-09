@@ -9,7 +9,7 @@ import javax.persistence.Id;
 @Entity
 public class Becados {
 	@Id
-	private String id_becado;
+	private String id;
 
 	private String nombre;
 	private String apellido;
@@ -24,10 +24,10 @@ public class Becados {
 
 	}
 
-	public Becados(String nombre, String apellido, String id_becado,Date fecha_nacimiento,Date fecha_ingreso_acoes,Date fecha_ingreso_proyecto,Date fecha_salida_proyecto, String observaciones) {
+	public Becados(String nombre, String apellido, String id,Date fecha_nacimiento,Date fecha_ingreso_acoes,Date fecha_ingreso_proyecto,Date fecha_salida_proyecto, String observaciones) {
 		this.nombre = nombre;
 		this.apellido = apellido;
-		this.id_becado = id_becado;
+		this.id = id;
 		this.fecha_nacimiento = fecha_nacimiento;
 		this.fecha_ingreso_acoes = fecha_ingreso_acoes;
 		this.fecha_ingreso_proyecto = fecha_ingreso_proyecto;
@@ -52,11 +52,11 @@ public class Becados {
 	}
 
 	public String getId() {
-		return id_becado;
+		return id;
 	}
 
-	public void setId(String id_becado) {
-		this.id_becado = id_becado;
+	public void setId(String id) {
+		this.id = id;
 	}
 	
 
@@ -104,7 +104,7 @@ public class Becados {
 
 	@Override
 	public String toString() {
-		return "Becados [id_becado=" + id_becado + ", nombre=" + nombre + ", apellido=" + apellido
+		return "Becados [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido
 				+ ", fecha_nacimiento=" + fecha_nacimiento + ", fecha_ingreso_acoes=" + fecha_ingreso_acoes
 				+ ", fecha_ingreso_proyecto=" + fecha_ingreso_proyecto + ", fecha_salida_proyecto="
 				+ fecha_salida_proyecto + ", observaciones=" + observaciones + "]";
@@ -112,7 +112,7 @@ public class Becados {
 
 	public int hashCode() {
 		try {
-			return Integer.parseInt(id_becado);
+			return Integer.parseInt(id);
 		} catch (Exception er) {
 			return 0;
 		}
@@ -128,7 +128,7 @@ public class Becados {
 			return false;
 
 		final Becados other = (Becados) obj;
-		if (!id_becado.equals(other.getId()))
+		if (!id.equals(other.getId()))
 			return false;
 		return true;
 	}

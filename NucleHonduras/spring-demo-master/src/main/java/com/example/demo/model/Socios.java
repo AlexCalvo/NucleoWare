@@ -5,12 +5,15 @@ import javax.persistence.Id;
 
 @Entity
 public class Socios {
+	
 	@Id
 	private String dni;
 
 	private String nombre;
 	private String apellido;
 
+	//Añadir atributos
+	
 	public Socios() {
 
 	}
