@@ -21,7 +21,7 @@
 			<strong>Actualizar Becados</strong>
 		</div>
 		<div class="panel-body">
-			<form class="form-horizontal" action="#" th:object="${becado}"
+			<form class="form-horizontal" action="#" th:object="${becados}"
 				th:action="@{/becados/edit}" method="post" style="margin: 10px">
 				<div class="form-group">
 					<fieldset>
@@ -51,10 +51,10 @@
 
 				<div class="form-group row">
 							<div class="col-md-4"
-								th:classappend="${#fields.hasErrors('id')}? 'has-error'">
-								<label>id</label> <input type="text"
-									class="form-control input-sm" th:field="*{id}"
-									autofocus="autofocus" placeholder="id" maxlength="15" />
+								th:classappend="${#fields.hasErrors('id_becado')}? 'has-error'">
+								<label>ID_Becado</label> <input type="text"
+									class="form-control input-sm" th:field="*{id_becado}"
+									autofocus="autofocus" placeholder="ID_Becado" maxlength="15" />
 							</div>
 						</div>
 							<div class="form-group row">
@@ -65,48 +65,13 @@
 									autofocus="autofocus" placeholder="Fecha_Nacimiento" maxlength="15" />
 							</div>
 						</div>
-							<div class="form-group row">
-							<div class="col-md-4"
-								th:classappend="${#fields.hasErrors('fecha_ingreso_acoes')}? 'has-error'">
-								<label>fecha_ingreso_acoes</label> <input type="date"
-									class="form-control input-sm" th:field="*{fecha_ingreso_acoes}"
-									autofocus="autofocus" placeholder="fecha_ingreso_acoes" maxlength="15" />
-							</div>
-						</div>
-						
-						<div class="form-group row">
-							<div class="col-md-4"
-								th:classappend="${#fields.hasErrors('fecha_ingreso_proyecto')}? 'has-error'">
-								<label>fecha_ingreso_proyecto</label> <input type="date"
-									class="form-control input-sm" th:field="*{fecha_ingreso_proyecto}"
-									autofocus="autofocus" placeholder="fecha_ingreso_proyecto" maxlength="15" />
-							</div>
-						</div>
-						
-						<div class="form-group row">
-							<div class="col-md-4"
-								th:classappend="${#fields.hasErrors('fecha_salida_proyecto')}? 'has-error'">
-								<label>fecha_salida_proyecto</label> <input type="date"
-									class="form-control input-sm" th:field="*{fecha_salida_proyecto}"
-									autofocus="autofocus" placeholder="fecha_salida_proyecto" maxlength="15" />
-							</div>
-						</div>
-						
-						<div class="form-group row">
-							<div class="col-md-4"
-								th:classappend="${#fields.hasErrors('observaciones')}? 'has-error'">
-								<label>observaciones</label> <input type="text"
-									class="form-control input-sm" th:field="*{observaciones}"
-									autofocus="autofocus" placeholder="observaciones" maxlength="15" />
-							</div>
-						</div>
 						
 						
 					</fieldset>
 				</div>
 				<div class="form-group row">
 					<button type="submit" class="btn btn-sm btn-primary">Guardar</button>
-					<a th:href="@{/becados}" class="btn btn-sm btn-default">Cancelar</a>
+					<a th:href="@{/socios}" class="btn btn-sm btn-default">Cancelar</a>
 				</div>
 			</form>
 		</div>

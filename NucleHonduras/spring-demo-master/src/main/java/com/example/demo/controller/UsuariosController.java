@@ -11,43 +11,43 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.example.demo.model.Becados;
-import com.example.demo.model.BecadosService;
+import com.example.demo.model.Usuario;
+import com.example.demo.model.UsuarioService;
 
 
 
 @Controller
-public class BecadosController {
+public class UsuariosController {
 	
 	@Autowired
-	BecadosService becadosService;
+	UsuarioService usuarioService;
 	
-	@GetMapping("/becados")
+	@GetMapping("/usuario")
 	public String listPersonView(Model model) {
-		model.addAttribute("becados", becadosService.getAll());
+		model.addAttribute("usuarios", usuarioService.getAll());
 		
-		return "becados";
+		return "usuarios";
 	}
 	
-	@GetMapping("/becados/add")
-	public String addPersonView(Becados becado, Model model) {
-		model.addAttribute("becados", becadosService.getAll());
-		model.addAttribute("becado", becado);
+	@GetMapping("/usuario/add")
+	public String addPersonView(Usuario usuario, Model model) {
+		model.addAttribute("usuarios", usuarioService.getAll());
+		model.addAttribute("usuario", usuario);
 		
-		return "addBecados";
+		return "addUsuario";
 	}
 	
-	@GetMapping("/becados/edit/{id}")
+	@GetMapping("/usuario/edit/{id}")
 	public String editPersonView(@PathVariable("id") String id, Model model) {
 		model.addAttribute("id", id);
-		model.addAttribute("becado", becadosService.getById(id));
-		return "updateBecado";
+		model.addAttribute("usuario", usuarioService.getById(id));
+		return "updateUsuario";
 	}
 	
-	@PostMapping("/becados")
-	public String save(@Valid Becados becado, BindingResult result, Model model) {
+	@PostMapping("/usuario")
+	public String save(@Valid Usuario usuario, BindingResult result, Model model) {
 		try {
-			becadosService.add(becado);
+			usuarioService.add(usuario);
 			model.addAttribute("create", true);
 		} catch (Exception er) {
 			model.addAttribute("create", false);
@@ -55,10 +55,10 @@ public class BecadosController {
 		return listPersonView(model);
 	}
 	
-	@PostMapping("/becados/edit")
-	public String update(@Valid Becados becado, BindingResult result, Model model) {
+	@PostMapping("/usuario/edit")
+	public String update(@Valid Usuario usuario, BindingResult result, Model model) {
 		try {
-			becadosService.update(becado);
+			usuarioService.update(usuario);
 			model.addAttribute("udpate", true);
 		} catch (Exception er) {
 			model.addAttribute("update", false);
@@ -66,10 +66,10 @@ public class BecadosController {
 		return listPersonView(model);
 	}
 	
-	@DeleteMapping("/becados/{id}")
+	@DeleteMapping("/usuario/{id}")
 	public String delete(@PathVariable("id") String id, Model model) {
 		try {
-			becadosService.delete(id);
+			usuarioService.delete(id);
 			model.addAttribute("delete", true);
 		} catch (Exception er) {
 			model.addAttribute("delete", false);

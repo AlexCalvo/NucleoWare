@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>usuarios</title>
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet"></link>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<strong> Usuarios</strong>
+		</div>
+		<div class="panel-body">
+			<div class="table-responsive">
+				<table
+					class="table table-sm table-striped table-hover table-bordered">
+					<thead>
+						<tr>
+							<th>id</th>							
+							<th>Nombre</th>
+							<th>Apellidos</th>
+							<th>email</th>
+							<th>Password</th>
+							<th>Fecha_Alta</th>
+							<th>Fecha_Baja</th>
+							<th>Observaciones</th>
+							<th>Operaciones</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="usuario : ${usuarios}">
+							<td th:text="${usuario.id}"></td>
+							<td th:text="${usuario.nombre}"></td>
+							<td th:text="${usuario.apellidos}"></td>
+							<td th:text="${usuario.email}"></td>
+							
+							<td th:date="${usuario.fechaAlta}"></td>
+							<td th:date="${usuario.fechaBaja}"></td>
+							<td th:text="${usuario.observaciones}"></td>
+							<td>
+								<div class="btn-group">
+
+									<form action="#" id="deleteForm" th:method="delete"
+										th:action="@{/usuario/{id}(id=${usuario.id})}">
+										<input type="submit" class="delete btn btn-sm btn-danger"
+											value="Eliminar" />
+									</form>
+
+									<form action="#" id="editForm" th:method="get"
+										th:action="@{/usuario/edit/{id}(id=${usuario.id})}">
+										<input type="submit" class="primary btn btn-sm btn-primary"
+											value="Editar" />
+									</form>
+
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div th:if="${delete != null && delete}" class="alert alert-success">
+			<strong>OK!</strong> El usuario ha sido eliminado correctamente.
+		</div>
+		<div th:if="${delete != null && !delete}" class="alert alert-danger">
+			<strong>Error!</strong> Error eliminado el usuario.
+		</div>
+		<div th:if="${update != null && update}" class="alert alert-success">
+			<strong>OK!</strong> El usuario ha sido actualizada correctamente.
+		</div>
+		<div th:if="${update != null && !update}" class="alert alert-danger">
+			<strong>Error!</strong> Error al actualizar el usuario.
+		</div>
+		<div th:if="${create != null && create}" class="alert alert-success">
+			<strong>OK!</strong> El usuario ha sido creado correctamente.
+		</div>
+		<div th:if="${create != null && !create}" class="alert alert-danger">
+			<strong>Error!</strong> Error al crear el usuario.
+		</div>
+		<div class="panel-footer">
+			<a class="btn btn-sm btn-success" th:href="@{/usuario/add/}">Nuevo usuario</a> 
+			<a class="btn btn-sm btn-primary" th:href="@{/}">Atrás</a>
+		</div>
+	</div>
+</body>
+</html>

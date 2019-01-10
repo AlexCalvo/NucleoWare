@@ -5,7 +5,7 @@
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width" />
-<title>Nueva Becado</title>
+<title>Nuevo Becado</title>
 <!-- jQuery library -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -18,11 +18,11 @@
 <body>
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<strong>Actualizar Becados</strong>
+			<strong>Nuevo Becado</strong>
 		</div>
 		<div class="panel-body">
 			<form class="form-horizontal" action="#" th:object="${becado}"
-				th:action="@{/becados/edit}" method="post" style="margin: 10px">
+				th:action="@{/becados}" method="POST" style="margin: 10px">
 				<div class="form-group">
 					<fieldset>
 						<div class="form-group row">
@@ -49,7 +49,7 @@
 							</div>
 						</div>
 
-				<div class="form-group row">
+						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('id')}? 'has-error'">
 								<label>id</label> <input type="text"
@@ -57,15 +57,17 @@
 									autofocus="autofocus" placeholder="id" maxlength="15" />
 							</div>
 						</div>
-							<div class="form-group row">
+						
+						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('fecha_nacimiento')}? 'has-error'">
-								<label>Fecha_Nacimiento</label> <input type="date"
+								<label>FECHA_NACIMIENTO</label> <input type="date"
 									class="form-control input-sm" th:field="*{fecha_nacimiento}"
-									autofocus="autofocus" placeholder="Fecha_Nacimiento" maxlength="15" />
+									autofocus="autofocus" placeholder="FECHA_NACIMIENTO" maxlength="15" />
 							</div>
 						</div>
-							<div class="form-group row">
+						
+						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('fecha_ingreso_acoes')}? 'has-error'">
 								<label>fecha_ingreso_acoes</label> <input type="date"
@@ -100,8 +102,6 @@
 									autofocus="autofocus" placeholder="observaciones" maxlength="15" />
 							</div>
 						</div>
-						
-						
 					</fieldset>
 				</div>
 				<div class="form-group row">
