@@ -21,8 +21,8 @@
 			<strong>Registrar usuario en NucleoWare</strong>
 		</div>
 		<div class="panel-body">
-			<form class="form-horizontal" action="#" th:object="${libro}"
-				th:action="@{/libros}" method="POST" style="margin: 10px">
+			<form class="form-horizontal" action="#" th:object="${usuario}"
+				th:action="@{/usuario}" method="POST" style="margin: 10px">
 				<div class="form-group">
 					<fieldset>
 						<div class="form-group row">
@@ -32,30 +32,16 @@
 								</div>
 							</div>
 						</div>
+						
 						<div class="form-group row">
 							<div class="col-md-4"
-								th:classappend="${#fields.hasErrors('isbn13')}? 'has-error'">
-								<label>ID Usuario:</label> <input type="number"
-									class="form-control input-sm" th:field="*{isbn13}"
-									autofocus="autofocus" placeholder="ID Usuario" maxlength="50" />
+								th:classappend="${#fields.hasErrors('id')}? 'has-error'">
+								<label>id:</label> <input type="text"
+									class="form-control input-sm" th:field="*{id}"
+									autofocus="autofocus" placeholder="id" maxlength="50" />
 							</div>
 						</div>
-						<div class="form-group row">
-							<div class="col-md-4"
-								th:classappend="${#fields.hasErrors('isbn13')}? 'has-error'">
-								<label>Contraseña:</label> <input type="number"
-									class="form-control input-sm" th:field="*{isbn13}"
-									autofocus="autofocus" placeholder="Contraseña" maxlength="50" />
-							</div>
-						</div>
-						<div class="form-group row">
-							<div class="col-md-4"
-								th:classappend="${#fields.hasErrors('isbn13')}? 'has-error'">
-								<label>E-mail:</label> <input type="number"
-									class="form-control input-sm" th:field="*{isbn13}"
-									autofocus="autofocus" placeholder="E-mail" maxlength="50" />
-							</div>
-						</div>
+						
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('nombre')}? 'has-error'">
@@ -66,41 +52,63 @@
 						</div>
 						<div class="form-group row">
 							<div class="col-md-4"
-								th:classappend="${#fields.hasErrors('nombre')}? 'has-error'">
+								th:classappend="${#fields.hasErrors('apellidos')}? 'has-error'">
 								<label>Apellidos:</label> <input type="text"
-									class="form-control input-sm" th:field="*{nombre}"
+									class="form-control input-sm" th:field="*{apellidos}"
 									autofocus="autofocus" placeholder="Apellidos" maxlength="50" />
 							</div>
 						</div>
+						
 						<div class="form-group row">
 							<div class="col-md-4"
-								th:classappend="${#fields.hasErrors('nombre')}? 'has-error'">
-								<label>Fecha de alta:</label> <input type="text"
-									class="form-control input-sm" th:field="*{nombre}"
-									autofocus="autofocus" placeholder="Fecha de alta" maxlength="50" />
+								th:classappend="${#fields.hasErrors('email')}? 'has-error'">
+								<label>email:</label> <input type="text"
+									class="form-control input-sm" th:field="*{email}"
+									autofocus="autofocus" placeholder="email" maxlength="50" />
 							</div>
 						</div>
+						
 						<div class="form-group row">
 							<div class="col-md-4"
-								th:classappend="${#fields.hasErrors('nombre')}? 'has-error'">
-								<label>Fecha de baja:</label> <input type="text"
-									class="form-control input-sm" th:field="*{nombre}"
-									autofocus="autofocus" placeholder="Fecha de baja" maxlength="50" />
+								th:classappend="${#fields.hasErrors('password')}? 'has-error'">
+								<label>password:</label> <input type="text"
+									class="form-control input-sm" th:field="*{password}"
+									autofocus="autofocus" placeholder="password" maxlength="50" />
 							</div>
 						</div>
+						
 						<div class="form-group row">
 							<div class="col-md-4"
-								th:classappend="${#fields.hasErrors('nombre')}? 'has-error'">
-								<label>Observaciones:</label> <input type="text"
-									class="form-control input-sm" th:field="*{nombre}"
-									autofocus="autofocus" placeholder="Observaciones" maxlength="50" />
+								th:classappend="${#fields.hasErrors('fechaAlta')}? 'has-error'">
+								<label>fechaAlta:</label> <input type="date"
+									class="form-control input-sm" th:field="*{fechaAlta}"
+									autofocus="autofocus" placeholder="fechaAlta"/>
 							</div>
 						</div>
+						
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('fechaBaja')}? 'has-error'">
+								<label>fechaBaja:</label> <input type="date"
+									class="form-control input-sm" th:field="*{fechaBaja}"
+									autofocus="autofocus" placeholder="fechaBaja"/>
+							</div>
+						</div>
+						
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('observaciones')}? 'has-error'">
+								<label>observaciones:</label> <input type="text"
+									class="form-control input-sm" th:field="*{observaciones}"
+									autofocus="autofocus" placeholder="observaciones" maxlength="50" />
+							</div>
+						</div>
+						
 					</fieldset>
 				</div>
 				<div class="form-group row">
 					<button type="submit" class="btn btn-sm btn-primary">Registrar</button>
-					<a th:href="@{/libros}" class="btn btn-sm btn-default">Cancelar</a>
+					<a th:href="@{/usuario}" class="btn btn-sm btn-default">Cancelar</a>
 				</div>
 			</form>
 		</div>
