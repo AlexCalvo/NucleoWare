@@ -19,34 +19,41 @@
 	<div class="panel panel-default">
 		<div class="panel-heading">
 			<strong>Becados</strong>
+			
 		</div>
+		
+		
 		<div class="panel-body">
 			<div class="table-responsive">
 				<table
 					class="table table-sm table-striped table-hover table-bordered">
 					<thead>
 						<tr>
+							
 							<th>Nombre</th>
 							<th>Apellido</th>
-							<th>id</th>
+							<th>ID</th>
 							<th>Fecha_Nacimiento</th>
 							<th>Fecha_ingreso_acoes</th>
 							<th>Fecha_ingreso_proyecto</th>
 							<th>Fecha_salida_proyecto</th>
 							<th>Observaciones</th>
+							<th>PROYECTO</th>
 							<th>Operaciones</th>
+							
 						</tr>
 					</thead>
 					<tbody>
 						<tr th:each="becado : ${becados}">
-							<td th:text="${becado.id}"></td>
 							<td th:text="${becado.nombre}"></td>
 							<td th:text="${becado.apellido}"></td>
+							<td th:text="${becado.id}"></td>
 							<td th:text="${becado.fecha_nacimiento}"></td>
 							<td th:text="${becado.fecha_ingreso_acoes}"></td>
 							<td th:text="${becado.fecha_ingreso_proyecto}"></td>
 							<td th:text="${becado.fecha_salida_proyecto}"></td>
 							<td th:text="${becado.observaciones}"></td>
+							<td th:text="${becado.proyecto}"></td>
 							<td>
 								<div class="btn-group">
 
@@ -60,6 +67,12 @@
 										th:action="@{/becados/edit/{id}(id=${becado.id})}">
 										<input type="submit" class="primary btn btn-sm btn-primary"
 											value="Editar" />
+									</form>
+									
+									<form action="#" id="ConsultForm" th:method="get"
+										th:action="@{/becados/consult/{id}(id=${becado.id})}">
+										<input type="submit" class="primary btn btn-sm btn-info"
+											value="Consultar" />
 									</form>
 
 								</div>
@@ -79,7 +92,7 @@
 			<strong>OK!</strong> La becado ha sido actualizada correctamente.
 		</div>
 		<div th:if="${update != null && !update}" class="alert alert-danger">
-			<strong>Error!</strong> Error al actualizar la becado.
+			<strong>Error!</strong> No se ha actualizado el becado.
 		</div>
 		<div th:if="${create != null && create}" class="alert alert-success">
 			<strong>OK!</strong> La becado ha sido creado correctamente.

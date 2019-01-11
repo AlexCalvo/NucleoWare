@@ -44,7 +44,14 @@ public class SociosController {
 		model.addAttribute("socios", socioService.getByDni(id));
 		return "updateSocio";
 	}
-
+	
+	@GetMapping("/socios/consult/{dni}")
+	public String ConsultPersonView(@PathVariable("dni") String id, Model model) {
+		model.addAttribute("dni", id);
+		model.addAttribute("socios", socioService.getByDni(id));
+		return "consultarSocio";
+	}
+	
 	/*---Anade un nuevo socio al sistema---*/
 	@PostMapping("/socios")
 	public String save(@Valid Socios socio, BindingResult result, Model model) {
