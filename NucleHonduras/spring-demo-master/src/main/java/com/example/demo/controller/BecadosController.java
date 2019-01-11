@@ -29,6 +29,8 @@ public class BecadosController {
 		return "becados";
 	}
 	
+	
+	
 	@GetMapping("/becados/add")
 	public String addPersonView(Becados becado, Model model) {
 		model.addAttribute("becados", becadosService.getAll());
@@ -42,6 +44,13 @@ public class BecadosController {
 		model.addAttribute("id", id);
 		model.addAttribute("becado", becadosService.getById(id));
 		return "updateBecado";
+	}
+	
+	@GetMapping("/becados/consult/{id}")
+	public String ConsultPersonView(@PathVariable("id") String id, Model model) {
+		model.addAttribute("id", id);
+		model.addAttribute("becado", becadosService.getById(id));
+		return "consultarBecado";
 	}
 	
 	@PostMapping("/becados")

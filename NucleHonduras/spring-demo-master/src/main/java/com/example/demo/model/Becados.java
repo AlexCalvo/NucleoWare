@@ -18,7 +18,7 @@ public class Becados {
 	private Date fecha_ingreso_proyecto;
 	private Date fecha_salida_proyecto;
 	private String observaciones;
-	
+	private String proyecto;
 	
 	public Becados() {
 
@@ -100,7 +100,14 @@ public class Becados {
 		this.observaciones = observaciones;
 	}
 
-	
+
+	public String getProyecto() {
+		return proyecto;
+	}
+
+	public void setProyecto(String p_proyecto) {
+		proyecto = p_proyecto;
+	}
 
 	@Override
 	public String toString() {
