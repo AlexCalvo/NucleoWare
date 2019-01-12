@@ -29,6 +29,12 @@
 							<th>Nombre</th>
 							<th>Apellido</th>
 							<th>DNI</th>
+							<th>E-mail</th>
+							<th>Telefono</th>
+							<th>Direccion</th>
+							<th>Provincia</th>
+							<th>Fecha_Alta</th>
+							<th>Fecha_Baja</th>
 							<th>Operaciones</th>
 						</tr>
 					</thead>
@@ -37,6 +43,12 @@
 							<td th:text="${persona.nombre}"></td>
 							<td th:text="${persona.apellido}"></td>
 							<td th:text="${persona.dni}"></td>
+							<td th:text="${persona.email}"></td>
+							<td th:text="${persona.telefono}"></td>
+							<td th:text="${persona.direccion}"></td>
+							<td th:text="${persona.provincia}"></td>
+							<td th:text="${persona.fecha_alta}"></td>
+							<td th:text="${persona.fecha_baja}"></td>
 							<td>
 								<div class="btn-group">
 
@@ -65,22 +77,22 @@
 			</div>
 		</div>
 		<div th:if="${delete != null && delete}" class="alert alert-success">
-			<strong>OK!</strong> La persona ha sido eliminado correctamente.
+			<strong>OK!</strong> El socio ha sido eliminado correctamente.
 		</div>
 		<div th:if="${delete != null && !delete}" class="alert alert-danger">
-			<strong>Error!</strong> Error eliminado la persona.
+			<strong>Error!</strong> Error eliminando al socio.
 		</div>
 		<div th:if="${update != null && update}" class="alert alert-success">
-			<strong>OK!</strong> La persona ha sido actualizada correctamente.
+			<strong>OK!</strong> El socio ha sido actualizado correctamente.
 		</div>
 		<div th:if="${update != null && !update}" class="alert alert-danger">
-			<strong>Error!</strong> Error al actualizar la persona.
+			<strong>Error!</strong> Error al actualizar el socio.
 		</div>
 		<div th:if="${create != null && create}" class="alert alert-success">
-			<strong>OK!</strong> La persona ha sido creado correctamente.
+			<strong>OK!</strong> El socio ha sido creado correctamente.
 		</div>
 		<div th:if="${create != null && !create}" class="alert alert-danger">
-			<strong>Error!</strong> Error al crear la persona.
+			<strong>Error!</strong> Error al crear el socio.
 		</div>
 		<div class="panel-footer">
 			<a class="btn btn-sm btn-success" th:href="@{/socios/add/}">Nueva persona</a> 

@@ -32,6 +32,7 @@ public class BecadosService {
 		b.setFecha_salida_proyecto(becado.getFecha_salida_proyecto());
 		b.setObservaciones(becado.getObservaciones());
 		b.setProyecto(becado.getProyecto());
+		b.setComunidad(becado.getComunidad());
 		becadosRepository.saveAndFlush(b);
 	}
 	

@@ -30,6 +30,13 @@ public class SociosService {
 		Socios p = socioRepository.getOne(socio.getDni());
 		p.setApellido(socio.getApellido());
 		p.setNombre(socio.getNombre());
+		p.setDireccion(socio.getDireccion());
+		p.setEmail(socio.getEmail());
+		p.setFecha_alta(socio.getFecha_alta());
+		p.setFecha_baja(socio.getFecha_baja());
+		p.setObservaciones(socio.getObservaciones());
+		p.setProvincia(socio.getProvincia());
+		p.setTelefono(socio.getTelefono());
 		socioRepository.saveAndFlush(p);
 	}
 	

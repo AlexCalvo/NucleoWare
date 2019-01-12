@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -11,8 +13,16 @@ public class Socios {
 
 	private String nombre;
 	private String apellido;
+	private String email;
+	private String telefono;
+	private String direccion;
+	private String provincia;
+	private Date fecha_alta;
+	private Date fecha_baja;
+	private String observaciones;
+	
 
-	//Añadir atributos
+	
 	
 	public Socios() {
 
@@ -46,6 +56,63 @@ public class Socios {
 
 	public void setDni(String dni) {
 		this.dni = dni;
+	}
+
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String p_email) {
+		email = p_email;
+	}
+
+	public String getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(String p_telefono) {
+		telefono = p_telefono;
+	}
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String p_direccion) {
+		direccion = p_direccion;
+	}
+
+	public String getProvincia() {
+		return provincia;
+	}
+
+	public void setProvincia(String p_provincia) {
+		provincia = p_provincia;
+	}
+
+	public Date getFecha_alta() {
+		return fecha_alta;
+	}
+
+	public void setFecha_alta(Date p_fecha_alta) {
+		fecha_alta = p_fecha_alta;
+	}
+
+	public Date getFecha_baja() {
+		return fecha_baja;
+	}
+
+	public void setFecha_baja(Date p_fecha_baja) {
+		fecha_baja = p_fecha_baja;
+	}
+
+	public String getObservaciones() {
+		return observaciones;
+	}
+
+	public void setObservaciones(String p_observaciones) {
+		observaciones = p_observaciones;
 	}
 
 	@Override

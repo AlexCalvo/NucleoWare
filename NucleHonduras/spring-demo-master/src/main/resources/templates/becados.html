@@ -39,6 +39,7 @@
 							<th>Fecha_salida_proyecto</th>
 							<th>Observaciones</th>
 							<th>PROYECTO</th>
+							<th>COMUNIDAD</th>
 							<th>Operaciones</th>
 							
 						</tr>
@@ -54,6 +55,7 @@
 							<td th:text="${becado.fecha_salida_proyecto}"></td>
 							<td th:text="${becado.observaciones}"></td>
 							<td th:text="${becado.proyecto}"></td>
+							<td th:text="${becado.comunidad}"></td>
 							<td>
 								<div class="btn-group">
 
@@ -83,22 +85,22 @@
 			</div>
 		</div>
 		<div th:if="${delete != null && delete}" class="alert alert-success">
-			<strong>OK!</strong> La becado ha sido eliminado correctamente.
+			<strong>OK!</strong> El becado ha sido eliminado correctamente.
 		</div>
 		<div th:if="${delete != null && !delete}" class="alert alert-danger">
-			<strong>Error!</strong> Error eliminado la becado.
+			<strong>Error!</strong> Error eliminado el becado.
 		</div>
 		<div th:if="${update != null && update}" class="alert alert-success">
-			<strong>OK!</strong> La becado ha sido actualizada correctamente.
+			<strong>OK!</strong> El becado ha sido actualizada correctamente.
 		</div>
 		<div th:if="${update != null && !update}" class="alert alert-danger">
 			<strong>Error!</strong> No se ha actualizado el becado.
 		</div>
 		<div th:if="${create != null && create}" class="alert alert-success">
-			<strong>OK!</strong> La becado ha sido creado correctamente.
+			<strong>OK!</strong> El becado ha sido creado correctamente.
 		</div>
 		<div th:if="${create != null && !create}" class="alert alert-danger">
-			<strong>Error!</strong> Error al crear la becado.
+			<strong>Error!</strong> Error al crear el becado.
 		</div>
 		<div class="panel-footer">
 			<a class="btn btn-sm btn-success" th:href="@{/becados/add/}">Nuevo becado</a> 
