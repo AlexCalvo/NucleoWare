@@ -1,8 +1,15 @@
 package com.example.demo;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -13,6 +20,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import com.example.demo.model.User;
 import com.example.demo.model.UserRepository;
 import com.example.demo.model.UserRepositoryDetailsService;
+import com.example.demo.model.UserService;
+
 
 @Configuration
 @EnableWebSecurity
@@ -49,16 +58,22 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			UserRepository userRepository) throws Exception {
 		auth.userDetailsService(userDetailsService).passwordEncoder(new BCryptPasswordEncoder());
 
+
 		// Crear usuario por defecto
 		User user = new User();
 		user.setEmail("admin@admin.com");
+		
 		// la contraseña es test (encriptada usando bcrypt)
 		// https://www.dailycred.com/article/bcrypt-calculator
 		user.setPassword("$2a$10$YzKy8baMVo2MVp.qY3LrfeJaShvQQvA0njYzfEH1nQswqI.2ZJkDy");
-		user.setFirstName("Alan");
-		user.setLastName("Wake");
+		user.setNombre("Alan");
+		user.setApellidos("Wake");
+		
 		if (userRepository.findByEmail(user.getEmail()) == null) {
 			userRepository.save(user);
 		}
+		
+		
+		
 	}
 }

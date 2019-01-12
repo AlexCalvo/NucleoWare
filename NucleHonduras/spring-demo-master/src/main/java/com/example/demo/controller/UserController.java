@@ -11,16 +11,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.example.demo.model.Usuario;
-import com.example.demo.model.UsuarioService;
+import com.example.demo.model.User;
+import com.example.demo.model.UserService;
 
 
 
 @Controller
-public class UsuariosController {
+public class UserController {
 	
 	@Autowired
-	UsuarioService usuarioService;
+	UserService usuarioService;
 	
 	@GetMapping("/usuario")
 	public String listPersonView(Model model) {
@@ -30,7 +30,7 @@ public class UsuariosController {
 	}
 	
 	@GetMapping("/usuario/add")
-	public String addPersonView(Usuario usuario, Model model) {
+	public String addPersonView(User usuario, Model model) {
 		model.addAttribute("usuarios", usuarioService.getAll());
 		model.addAttribute("usuario", usuario);
 		
@@ -38,14 +38,14 @@ public class UsuariosController {
 	}
 	
 	@GetMapping("/usuario/edit/{id}")
-	public String editPersonView(@PathVariable("id") String id, Model model) {
+	public String editPersonView(@PathVariable("id") Long id, Model model) {
 		model.addAttribute("id", id);
 		model.addAttribute("usuario", usuarioService.getById(id));
 		return "updateUsuario";
 	}
 	
 	@PostMapping("/usuario")
-	public String save(@Valid Usuario usuario, BindingResult result, Model model) {
+	public String save(@Valid User usuario, BindingResult result, Model model) {
 		try {
 			usuarioService.add(usuario);
 			model.addAttribute("create", true);
@@ -56,7 +56,7 @@ public class UsuariosController {
 	}
 	
 	@PostMapping("/usuario/edit")
-	public String update(@Valid Usuario usuario, BindingResult result, Model model) {
+	public String update(@Valid User usuario, BindingResult result, Model model) {
 		try {
 			usuarioService.update(usuario);
 			model.addAttribute("udpate", true);
@@ -67,7 +67,7 @@ public class UsuariosController {
 	}
 	
 	@DeleteMapping("/usuario/{id}")
-	public String delete(@PathVariable("id") String id, Model model) {
+	public String delete(@PathVariable("id") Long id, Model model) {
 		try {
 			usuarioService.delete(id);
 			model.addAttribute("delete", true);
@@ -77,3 +77,4 @@ public class UsuariosController {
 		return listPersonView(model);
 	}
 }
+

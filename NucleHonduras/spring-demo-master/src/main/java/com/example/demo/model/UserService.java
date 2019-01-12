@@ -23,12 +23,15 @@ public class UserService {
 		userRepository.save(user);
 	}
 	
-	public void update(User user) {
-		User p = userRepository.getOne(user.getId());
-		p.setEmail(user.getEmail());
-		p.setFirstName(user.getFirstName());
-		p.setLastName(user.getLastName());
-		p.setPassword(user.getPassword());
+	public void update(User usuario) {
+		User p = userRepository.getOne(usuario.getId());
+		p.setApellidos(usuario.getApellidos());
+		p.setEmail(usuario.getEmail());
+		p.setFechaAlta(usuario.getFechaAlta());
+		p.setFechaBaja(usuario.getFechaBaja());
+		p.setNombre(usuario.getNombre());
+		p.setObservaciones(usuario.getObservaciones());
+		p.setPassword(usuario.getPassword());
 		userRepository.saveAndFlush(p);
 	}
 	
