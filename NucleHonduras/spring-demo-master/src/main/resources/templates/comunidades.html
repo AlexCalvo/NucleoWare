@@ -27,7 +27,7 @@
 					<thead>
 						<tr>
 							<th>Nombre</th>
-							<th>id</th>
+							<th>ID</th>
 							<th>Ubicacion</th>
 							<th>Poblacion</th>
 							<th>NumeroNinos</th>
@@ -56,6 +56,12 @@
 										th:action="@{/comunidades/edit/{id}(id=${comunidad.id})}">
 										<input type="submit" class="primary btn btn-sm btn-primary"
 											value="Editar" />
+									</form>
+									
+									<form action="#" id="ConsultForm" th:method="get"
+										th:action="@{/comunidades/consult/{id}(id=${comunidad.id})}">
+										<input type="submit" class="primary btn btn-sm btn-info"
+											value="Consultar" />
 									</form>
 
 								</div>

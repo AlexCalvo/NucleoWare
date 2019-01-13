@@ -44,6 +44,13 @@ public class ComunidadesController {
 		return "updateComunidad";
 	}
 	
+	@GetMapping("/comunidades/consult/{id}")
+	public String ConsultPersonView(@PathVariable("id") String id, Model model) {
+		model.addAttribute("id", id);
+		model.addAttribute("comunidad", comunidadesService.getById(id));
+		return "consultarComunidad";
+	}
+	
 	@PostMapping("/comunidades")
 	public String save(@Valid Comunidades comunidad, BindingResult result, Model model) {
 		try {

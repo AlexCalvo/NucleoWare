@@ -5,7 +5,7 @@
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width" />
-<title>Nueva Comunidad</title>
+<title>Consultar Comunidad</title>
 <!-- jQuery library -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -18,11 +18,11 @@
 <body>
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<strong>Nueva Comunidad</strong>
+			<strong>Actualizar Comunidades</strong>
 		</div>
 		<div class="panel-body">
 			<form class="form-horizontal" action="#" th:object="${comunidad}"
-				th:action="@{/comunidades}" method="POST" style="margin: 10px">
+				th:action="@{/comunidades/edit}" method="post" style="margin: 10px">
 				<div class="form-group">
 					<fieldset>
 						<div class="form-group row">
@@ -37,7 +37,7 @@
 								th:classappend="${#fields.hasErrors('nombre')}? 'has-error'">
 								<label>Nombre</label> <input type="text"
 									class="form-control input-sm" th:field="*{nombre}"
-									autofocus="autofocus" placeholder="Nombre" maxlength="50" />
+									autofocus="autofocus" placeholder="Nombre" maxlength="50" disabled />
 							</div>
 						</div>
 						
@@ -47,7 +47,7 @@
 								th:classappend="${#fields.hasErrors('id')}? 'has-error'">
 								<label>ID</label> <input type="text"
 									class="form-control input-sm" th:field="*{id}"
-									autofocus="autofocus" placeholder="ID" maxlength="15" />
+									autofocus="autofocus" placeholder="id" maxlength="15" disabled />
 							</div>
 						</div>
 						
@@ -56,7 +56,7 @@
 								th:classappend="${#fields.hasErrors('ubicacion')}? 'has-error'">
 								<label>Ubicacion</label> <input type="text"
 									class="form-control input-sm" th:field="*{ubicacion}"
-									autofocus="autofocus" placeholder="ubicacion" maxlength="50" />
+									autofocus="autofocus" placeholder="ubicacion" maxlength="50" disabled />
 							</div>
 						</div>
 						
@@ -66,7 +66,7 @@
 								th:classappend="${#fields.hasErrors('poblacion')}? 'has-error'">
 								<label>Poblacion</label> <input type="text"
 									class="form-control input-sm" th:field="*{poblacion}"
-									autofocus="autofocus" placeholder="poblacion" maxlength="50" />
+									autofocus="autofocus" placeholder="poblacion" maxlength="50" disabled />
 							</div>
 						</div>
 						
@@ -75,22 +75,23 @@
 								th:classappend="${#fields.hasErrors('numeroNinos')}? 'has-error'">
 								<label>Numero Ninos</label> <input type="text"
 									class="form-control input-sm" th:field="*{numeroNinos}"
-									autofocus="autofocus" placeholder="numeroNinos" maxlength="15" />
+									autofocus="autofocus" placeholder="numeroNinos" maxlength="15" disabled />
 							</div>
 						</div>
 						
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('observaciones')}? 'has-error'">
-								<label>OBSERVACIONES</label> <input type="text"
+								<label>Observaciones</label> <input type="text"
 									class="form-control input-sm" th:field="*{observaciones}"
-									autofocus="autofocus" placeholder="observaciones" maxlength="250" />
+									autofocus="autofocus" placeholder="observaciones" maxlength="250" disabled />
 							</div>
 						</div>
+						
 					</fieldset>
 				</div>
 				<div class="form-group row">
-					<button type="submit" class="btn btn-sm btn-primary">Guardar</button>
+					<button type="submit" class="btn btn-sm btn-primary">FIN DE CONSULTA</button>
 					<a th:href="@{/comunidades}" class="btn btn-sm btn-default">Cancelar</a>
 				</div>
 			</form>

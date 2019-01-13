@@ -39,6 +39,7 @@
 							<th>Fecha_salida_proyecto</th>
 							<th>Observaciones</th>
 							<th>PROYECTO</th>
+							<th>COMUNIDAD</th>
 							<th>Operaciones</th>
 							
 						</tr>
@@ -54,6 +55,7 @@
 							<td th:text="${becado.fecha_salida_proyecto}"></td>
 							<td th:text="${becado.observaciones}"></td>
 							<td th:text="${becado.proyecto}"></td>
+							<td th:text="${becado.comunidad}"></td>
 							<td>
 								<div class="btn-group">
 
@@ -86,10 +88,17 @@
 			<strong>OK!</strong> El becado ha sido eliminado correctamente.
 		</div>
 		<div th:if="${delete != null && !delete}" class="alert alert-danger">
+<<<<<<< HEAD
 			<strong>Error!</strong> Error eliminando el becado.
 		</div>
 		<div th:if="${update != null && update}" class="alert alert-success">
 			<strong>OK!</strong> El becado ha sido actualizado correctamente.
+=======
+			<strong>Error!</strong> Error eliminado el becado.
+		</div>
+		<div th:if="${update != null && update}" class="alert alert-success">
+			<strong>OK!</strong> El becado ha sido actualizada correctamente.
+>>>>>>> 1fc322a40f0065dd21cb3552970d08147056febd
 		</div>
 		<div th:if="${update != null && !update}" class="alert alert-danger">
 			<strong>Error!</strong> No se ha actualizado el becado.

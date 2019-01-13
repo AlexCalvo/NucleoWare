@@ -37,7 +37,7 @@
 								th:classappend="${#fields.hasErrors('nombre')}? 'has-error'">
 								<label>Nombre</label> <input type="text"
 									class="form-control input-sm" th:field="*{nombre}"
-									autofocus="autofocus" placeholder="Nombre" maxlength="50" disabled />
+									autofocus="autofocus" placeholder="Nombre" maxlength="50" readonly />
 							</div>
 						</div>
 						<div class="form-group row">
@@ -45,7 +45,7 @@
 								th:classappend="${#fields.hasErrors('apellido')}? 'has-error'">
 								<label>Apellidos</label> <input type="text"
 									class="form-control input-sm" th:field="*{apellido}"
-									autofocus="autofocus" placeholder="Apellidos" maxlength="50" disabled />
+									autofocus="autofocus" placeholder="Apellidos" maxlength="50" readonly />
 							</div>
 						</div>
 
@@ -58,6 +58,64 @@
 									maxlength="15" />
 							</div>
 						</div>
+						
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('email')}? 'has-error'">
+								<label>E-MAIL</label> <input type="text"
+									class="form-control input-sm" th:field="*{email}"
+									autofocus="autofocus" placeholder="email" maxlength="50" readonly />
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('telefono')}? 'has-error'">
+								<label>TELEFONO</label> <input type="text"
+									class="form-control input-sm" th:field="*{telefono}"
+									autofocus="autofocus" placeholder="telefono" maxlength="9" readonly />
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('direccion')}? 'has-error'">
+								<label>DIRECCION</label> <input type="text"
+									class="form-control input-sm" th:field="*{direccion}"
+									autofocus="autofocus" placeholder="direccion" maxlength="50" readonly />
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('provincia')}? 'has-error'">
+								<label>PROVINCIA</label> <input type="text"
+									class="form-control input-sm" th:field="*{provincia}"
+									autofocus="autofocus" placeholder="provincia" maxlength="50" readonly />
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('fecha_alta')}? 'has-error'">
+								<label>FECHA_ALTA</label> <input type="date"
+									class="form-control input-sm" th:field="*{fecha_alta}"
+									autofocus="autofocus" placeholder="fecha_alta" maxlength="50" readonly />
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('fecha_baja')}? 'has-error'">
+								<label>FECHA_BAJA</label> <input type="date"
+									class="form-control input-sm" th:field="*{fecha_baja}"
+									autofocus="autofocus" placeholder="fecha_baja" maxlength="50" readonly />
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('observaciones')}? 'has-error'">
+								<label>OBSERVACIONES</label> <input type="text"
+									class="form-control input-sm" th:field="*{observaciones}"
+									autofocus="autofocus" placeholder="observaciones" maxlength="250" readonly />
+							</div>
+						</div>
+						
 					</fieldset>
 				</div>
 				<div class="form-group row">

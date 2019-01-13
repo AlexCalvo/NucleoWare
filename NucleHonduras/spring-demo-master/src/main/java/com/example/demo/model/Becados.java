@@ -19,6 +19,7 @@ public class Becados {
 	private Date fecha_salida_proyecto;
 	private String observaciones;
 	private String proyecto;
+	private String comunidad;
 	
 	public Becados() {
 
@@ -107,6 +108,15 @@ public class Becados {
 
 	public void setProyecto(String p_proyecto) {
 		proyecto = p_proyecto;
+	}
+
+	
+	public String getComunidad() {
+		return comunidad;
+	}
+
+	public void setComunidad(String p_comunidad) {
+		comunidad = p_comunidad;
 	}
 
 	@Override
