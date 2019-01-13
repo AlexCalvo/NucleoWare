@@ -83,22 +83,22 @@
 			</div>
 		</div>
 		<div th:if="${delete != null && delete}" class="alert alert-success">
-			<strong>OK!</strong> La becado ha sido eliminado correctamente.
+			<strong>OK!</strong> El becado ha sido eliminado correctamente.
 		</div>
 		<div th:if="${delete != null && !delete}" class="alert alert-danger">
-			<strong>Error!</strong> Error eliminado la becado.
+			<strong>Error!</strong> Error eliminando el becado.
 		</div>
 		<div th:if="${update != null && update}" class="alert alert-success">
-			<strong>OK!</strong> La becado ha sido actualizada correctamente.
+			<strong>OK!</strong> El becado ha sido actualizado correctamente.
 		</div>
 		<div th:if="${update != null && !update}" class="alert alert-danger">
 			<strong>Error!</strong> No se ha actualizado el becado.
 		</div>
 		<div th:if="${create != null && create}" class="alert alert-success">
-			<strong>OK!</strong> La becado ha sido creado correctamente.
+			<strong>OK!</strong> El becado ha sido creado correctamente.
 		</div>
 		<div th:if="${create != null && !create}" class="alert alert-danger">
-			<strong>Error!</strong> Error al crear la becado.
+			<strong>Error!</strong> Error al crear el becado.
 		</div>
 		<div class="panel-footer">
 			<a class="btn btn-sm btn-success" th:href="@{/becados/add/}">Nuevo becado</a> 
