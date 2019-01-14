@@ -44,6 +44,13 @@ public class ProyectosController {
 		return "updateProyecto";
 	}
 	
+	@GetMapping("/proyectos/consult/{id}")
+	public String ConsultPersonView(@PathVariable("id") String id, Model model) {
+		model.addAttribute("id", id);
+		model.addAttribute("proyecto", proyectosService.getById(id));
+		return "consultarProyecto";
+	}
+	
 	@PostMapping("/proyectos")
 	public String save(@Valid Proyectos proyecto, BindingResult result, Model model) {
 		try {

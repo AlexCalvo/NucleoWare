@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Consultar Apadrinamiento</title>
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet"></link>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<strong>Consultar Apadrinamientos</strong>
+		</div>
+		<div class="panel-body">
+			<form class="form-horizontal" action="#" th:object="${apadrinamiento}"
+				th:action="@{/apadrinamientos/edit}" method="post" style="margin: 10px">
+				<div class="form-group">
+					<fieldset>
+						<div class="form-group row">
+							<div class="alert alert-danger" th:if="${#fields.hasAnyErrors()}">
+								<div th:each="detailedError : ${#fields.detailedErrors()}">
+									<span th:text="${detailedError.message}"></span>
+								</div>
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('id')}? 'has-error'">
+								<label>ID</label> <input type="text"
+									class="form-control input-sm" th:field="*{id}"
+									autofocus="autofocus" placeholder="ID" maxlength="15" disabled/>
+							</div>
+						</div>
+						
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('padrino')}? 'has-error'">
+								<label>PADRINO</label> <input type="text"
+									class="form-control input-sm" th:field="*{padrino}"
+									autofocus="autofocus" placeholder="PADRINO" maxlength="15" disabled/>
+							</div>
+						</div>
+
+						
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('apadrinado')}? 'has-error'">
+								<label>APADRINADO</label> <input type="text"
+									class="form-control input-sm" th:field="*{apadrinado}"
+									autofocus="autofocus" placeholder="APADRINADO" maxlength="15" disabled/>
+							</div>
+						</div>
+						
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('agente')}? 'has-error'">
+								<label>AGENTE</label> <input type="text"
+									class="form-control input-sm" th:field="*{agente}"
+									autofocus="autofocus" placeholder="AGENTE" maxlength="15" disabled/>
+							</div>
+						</div>
+						
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('fecha_creacion')}? 'has-error'">
+								<label>FECHA_CREACION</label> <input type="date"
+									class="form-control input-sm" th:field="*{fecha_creacion}"
+									autofocus="autofocus" placeholder="FECHA_CREACION" maxlength="15" disabled/>
+							</div>
+						</div>
+						
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('fecha_salida')}? 'has-error'">
+								<label>FECHA_SALIDA</label> <input type="date"
+									class="form-control input-sm" th:field="*{fecha_salida}"
+									autofocus="autofocus" placeholder="FECHA_SALIDA" maxlength="15" disabled/>
+							</div>
+						</div>
+						
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('observaciones')}? 'has-error'">
+								<label>Observaciones</label> <input type="text"
+									class="form-control input-sm" th:field="*{observaciones}"
+									autofocus="autofocus" placeholder="OBSERVACIONES" maxlength="15" disabled/>
+							</div>
+						</div>
+						
+						
+					</fieldset>
+				</div>
+				<div class="form-group row">
+					<button type="submit" class="btn btn-sm btn-primary">FIN DE CONSULTA</button>
+					<a th:href="@{/apadrinamientos}" class="btn btn-sm btn-default">Cancelar</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

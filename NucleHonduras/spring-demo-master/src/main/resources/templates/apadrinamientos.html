@@ -59,6 +59,11 @@
 											value="Editar" />
 									</form>
 
+									<form action="#" id="ConsultForm" th:method="get"
+										th:action="@{/apadrinamientos/consult/{id}(id=${ap.id})}">
+										<input type="submit" class="primary btn btn-sm btn-info"
+											value="Consultar" />
+									</form>
 								</div>
 							</td>
 						</tr>

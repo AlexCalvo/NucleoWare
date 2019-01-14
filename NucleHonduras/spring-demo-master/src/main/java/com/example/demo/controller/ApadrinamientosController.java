@@ -44,6 +44,13 @@ public class ApadrinamientosController {
 		return "updateApadrinamiento";
 	}
 	
+	@GetMapping("/apadrinamientos/consult/{id}")
+	public String ConsultPersonView(@PathVariable("id") Long id, Model model) {
+		model.addAttribute("id", id);
+		model.addAttribute("apadrinamiento", apService.getById(id));
+		return "consultarApadrinamiento";
+	}
+	
 	@PostMapping("/apadrinamientos")
 	public String save(@Valid Apadrinamientos a, BindingResult result, Model model) {
 		try {
