@@ -38,7 +38,7 @@
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('nombre')}? 'has-error'">
-								<label>Nombre</label> <input type="text"
+								<label>Nombre</label> <input type="text" 
 									class="form-control input-sm" th:field="*{nombre}"
 									autofocus="autofocus" placeholder="Nombre" maxlength="50" />
 							</div>
@@ -55,11 +55,13 @@
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('id')}? 'has-error'">
-								<label>id</label> <input type="text"
+								<label>id</label> <input type="text" name="id" 
 									class="form-control input-sm" th:field="*{id}"
 									autofocus="autofocus" placeholder="id" maxlength="15" />
 							</div>
 						</div>
+						
+						
 
 						
 						
@@ -111,7 +113,7 @@
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('proyecto')}? 'has-error'">
-								<label>Proyecto</label> <input type="text"
+								<label>Proyecto</label> <input type="text" 
 									class="form-control input-sm" th:field="*{proyecto}"
 									autofocus="autofocus" placeholder="proyecto" maxlength="15" />
 							</div>
