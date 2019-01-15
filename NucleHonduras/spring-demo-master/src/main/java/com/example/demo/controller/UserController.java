@@ -44,6 +44,13 @@ public class UserController {
 		return "updateUsuario";
 	}
 	
+	@GetMapping("/usuario/consult/{id}")
+	public String ConsultPersonView(@PathVariable("id") Long id, Model model) {
+		model.addAttribute("id", id);
+		model.addAttribute("usuario", usuarioService.getById(id));
+		return "consultarUsuario";
+	}
+	
 	@PostMapping("/usuario")
 	public String save(@Valid User usuario, BindingResult result, Model model) {
 		try {
@@ -59,7 +66,7 @@ public class UserController {
 	public String update(@Valid User usuario, BindingResult result, Model model) {
 		try {
 			usuarioService.update(usuario);
-			model.addAttribute("udpate", true);
+			model.addAttribute("update", true);
 		} catch (Exception er) {
 			model.addAttribute("update", false);
 		}

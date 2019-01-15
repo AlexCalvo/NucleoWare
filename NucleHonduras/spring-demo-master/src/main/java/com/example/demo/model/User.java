@@ -23,6 +23,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 // los usuarios registrados en el sistema se guardan en este tipo de entidad
 @Entity
 public class User{
@@ -50,7 +52,7 @@ public class User{
         this.nombre = user.nombre;
         this.apellidos = user.apellidos;
         this.email = user.email;
-        this.password = user.password;
+        this.password = encodePassword(user.password);
         this.fechaAlta = user.fechaAlta;
     	this.fechaBaja = user.fechaBaja;
     	this.observaciones = user.observaciones;
@@ -68,7 +70,7 @@ public class User{
 	this.nombre = nombre;
 	this.apellidos = apellidos;
 	this.email = email;
-	this.password = password;
+	this.password = encodePassword(password);
 	this.fechaAlta = fechaAlta;
 	this.fechaBaja = fechaBaja;
 	this.observaciones = observaciones;
@@ -205,4 +207,9 @@ public class User{
 		this.password = password;
 	}
 
+	private String encodePassword(String password) {
+		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+		String hashedPass = passwordEncoder.encode(password);
+		return hashedPass;
+	}
 }
