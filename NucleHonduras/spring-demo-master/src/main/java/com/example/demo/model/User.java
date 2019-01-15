@@ -44,7 +44,11 @@ public class User{
     private String email;
 
     private String password;
-
+    
+    private enum TipoUsuario {
+    	CGENERAL, COORDINADOR, AGENTE, ECONOMICO;
+    }
+    private TipoUsuario tipo;
     public User() {}
 
     public User(User user) {
@@ -55,6 +59,7 @@ public class User{
         this.password = encodePassword(user.password);
         this.fechaAlta = user.fechaAlta;
     	this.fechaBaja = user.fechaBaja;
+    	this.tipo = user.tipo;
     	this.observaciones = user.observaciones;
     }
     public User(Long id,
@@ -64,6 +69,7 @@ public class User{
 			String password,
 			Date fechaAlta,
 			Date fechaBaja,
+			TipoUsuario tipo,
 			String observaciones) {
 	
 	this.id = id;
@@ -73,8 +79,17 @@ public class User{
 	this.password = encodePassword(password);
 	this.fechaAlta = fechaAlta;
 	this.fechaBaja = fechaBaja;
+	this.tipo = tipo;
 	this.observaciones = observaciones;
 }
+
+	public TipoUsuario getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(TipoUsuario tipo) {
+		this.tipo = tipo;
+	}
 
 	public Long getId() {
 		return id;
