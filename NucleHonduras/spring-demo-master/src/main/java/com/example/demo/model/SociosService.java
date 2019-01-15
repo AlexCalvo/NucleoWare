@@ -37,6 +37,7 @@ public class SociosService {
 		p.setObservaciones(socio.getObservaciones());
 		p.setProvincia(socio.getProvincia());
 		p.setTelefono(socio.getTelefono());
+		p.setCuota(socio.getCuota());
 		socioRepository.saveAndFlush(p);
 	}
 	

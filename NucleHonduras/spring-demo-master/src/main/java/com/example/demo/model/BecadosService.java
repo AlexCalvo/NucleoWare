@@ -33,6 +33,7 @@ public class BecadosService {
 		b.setObservaciones(becado.getObservaciones());
 		b.setProyecto(becado.getProyecto());
 		b.setComunidad(becado.getComunidad());
+		b.setNotaMedia(becado.getNotaMedia());
 		becadosRepository.saveAndFlush(b);
 	}
 	

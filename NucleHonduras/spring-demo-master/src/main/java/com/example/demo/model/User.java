@@ -44,7 +44,11 @@ public class User{
     private String email;
 
     private String password;
-
+    
+    private enum TipoUsuario {
+    	CGENERAL, COORDINADOR, AGENTE, ECONOMICO;
+    }
+    private TipoUsuario tipo;
     public User() {}
 
     public User(User user) {
@@ -52,9 +56,10 @@ public class User{
         this.nombre = user.nombre;
         this.apellidos = user.apellidos;
         this.email = user.email;
-        this.password = user.password;
+        this.password = encodePassword(user.password);
         this.fechaAlta = user.fechaAlta;
     	this.fechaBaja = user.fechaBaja;
+    	this.tipo = user.tipo;
     	this.observaciones = user.observaciones;
     }
     public User(Long id,
@@ -64,17 +69,27 @@ public class User{
 			String password,
 			Date fechaAlta,
 			Date fechaBaja,
+			TipoUsuario tipo,
 			String observaciones) {
 	
 	this.id = id;
 	this.nombre = nombre;
 	this.apellidos = apellidos;
 	this.email = email;
-	this.password = password;
+	this.password = encodePassword(password);
 	this.fechaAlta = fechaAlta;
 	this.fechaBaja = fechaBaja;
+	this.tipo = tipo;
 	this.observaciones = observaciones;
 }
+
+	public TipoUsuario getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(TipoUsuario tipo) {
+		this.tipo = tipo;
+	}
 
 	public Long getId() {
 		return id;
@@ -207,5 +222,13 @@ public class User{
 		this.password = password;
 	}
 
+<<<<<<< HEAD
 	
+=======
+	private String encodePassword(String password) {
+		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+		String hashedPass = passwordEncoder.encode(password);
+		return hashedPass;
+	}
+>>>>>>> f272e8baa5412d9d6c31b0f8c12ecba1a3b3588d
 }

@@ -34,6 +34,7 @@
 							<th>fechaAlta</th>
 							<th>fechaBaja</th>
 							<th>Observaciones</th>
+							<th>TipoUsuario</th>
 							<th>Operaciones</th>
 						</tr>
 					</thead>
@@ -46,6 +47,7 @@
 							<td th:text="${usuario.password}"></td>
 							<td th:text="${usuario.fechaAlta}"></td>
 							<td th:text="${usuario.fechaBaja}"></td>
+							<td th:text="${usuario.tipo}"></td>
 							<td th:text="${usuario.observaciones}"></td>
 							<td>
 								<div class="btn-group">
@@ -62,6 +64,11 @@
 											value="Editar" />
 									</form>
 
+									<form action="#" id="ConsultForm" th:method="get"
+										th:action="@{/usuario/consult/{id}(id=${usuario.id})}">
+										<input type="submit" class="primary btn btn-sm btn-info"
+											value="Consultar" />
+									</form>
 								</div>
 							</td>
 						</tr>

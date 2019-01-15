@@ -32,6 +32,7 @@ public class UserService {
 		p.setNombre(usuario.getNombre());
 		p.setObservaciones(usuario.getObservaciones());
 		p.setPassword(usuario.getPassword());
+		p.setTipo(usuario.getTipo());
 		userRepository.saveAndFlush(p);
 	}
 	

@@ -115,7 +115,14 @@
 									autofocus="autofocus" placeholder="observaciones" maxlength="250" readonly />
 							</div>
 						</div>
-						
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('cuota')}? 'has-error'">
+								<label>CUOTA</label> <input type="text"
+									class="form-control input-sm" th:field="*{cuota}"
+									autofocus="autofocus" placeholder="cuota" maxlength="15" readonly/>
+							</div>
+						</div>
 					</fieldset>
 				</div>
 				<div class="form-group row">

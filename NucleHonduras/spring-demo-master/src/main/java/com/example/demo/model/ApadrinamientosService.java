@@ -29,9 +29,8 @@ public class ApadrinamientosService {
 		b.setAgente(ap.getAgente());
 		b.setFecha_creacion(ap.getFecha_creacion());
 		b.setFecha_salida(ap.getFecha_salida());
-		
 		b.setObservaciones(ap.getObservaciones());
-		
+		b.setCuota(ap.getCuota());
 		apadrinamientosRepository.saveAndFlush(b);
 	}
 	

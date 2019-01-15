@@ -68,7 +68,7 @@ public class BecadosController {
 	public String update(@Valid Becados becado, BindingResult result, Model model) {
 		try {
 			becadosService.update(becado);
-			model.addAttribute("udpate", true);
+			model.addAttribute("update", true);
 		} catch (Exception er) {
 			model.addAttribute("update", false);
 		}
