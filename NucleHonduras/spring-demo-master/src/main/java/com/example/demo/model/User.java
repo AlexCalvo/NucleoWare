@@ -23,6 +23,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 // los usuarios registrados en el sistema se guardan en este tipo de entidad
 @Entity
 public class User{
@@ -205,4 +207,5 @@ public class User{
 		this.password = password;
 	}
 
+	
 }

@@ -49,8 +49,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		// solo usar durante la fase de desarrollo para poder acceder a la pagina de
 		// administracion de la base de datos
 		// despues comentar estas lineas
-		http.csrf().disable();
-		http.headers().frameOptions().disable();
+		//http.csrf().disable();
+		//http.headers().frameOptions().disable();
 	}
 
 	@Autowired

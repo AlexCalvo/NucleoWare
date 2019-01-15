@@ -45,11 +45,10 @@
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('tipo')}? 'has-error'">
 								<label>Tipo</label>  
-									<input type="radio" name="tipo" value="CCJ" checked disabled> CCJ<br>
-									<input type="radio" name="tipo" value="POPULORUM" disabled> POPULORUM
+									<input type="text"
 									
-									<!--class="form-control input-sm" th:field="*{tipo}"-->
-									<!--autofocus="autofocus" placeholder="Tipo" maxlength="50" />-->
+									class="form-control input-sm" th:field="*{tipo}"
+									autofocus="autofocus" placeholder="Tipo" maxlength="50" disabled />
 							</div>
 						</div>
 
