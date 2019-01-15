@@ -222,13 +222,9 @@ public class User{
 		this.password = password;
 	}
 
-<<<<<<< HEAD
-	
-=======
 	private String encodePassword(String password) {
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		String hashedPass = passwordEncoder.encode(password);
 		return hashedPass;
 	}
->>>>>>> f272e8baa5412d9d6c31b0f8c12ecba1a3b3588d
 }
