@@ -100,7 +100,14 @@
 									autofocus="autofocus" placeholder="fecha_salida_proyecto" maxlength="15" />
 							</div>
 						</div>
-						
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('notaMedia')}? 'has-error'">
+								<label>NotaMedia</label> <input type="text"
+									class="form-control input-sm" th:field="*{notaMedia}"
+									autofocus="autofocus" placeholder="notaMedia" maxlength="250" />
+							</div>
+						</div>
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('observaciones')}? 'has-error'">
