@@ -13,7 +13,8 @@
 	<br>
 	<div sec:authorize="isAuthenticated()">
 		<div>
-			Bienvenido a NucleoWare, estás logueado con el usuario <b sec:authentication="name"></b>
+		<h1 style="background-color:LightSalmon;"> Bienvenido a NucleoWare, estás logueado con el usuario <b sec:authentication="name"></b></h1>
+			<b sec:authentication="name"></b>
 		</div>
 		<form th:action="@{/logout}" method="post">
 			<input type="submit" value="Logout" />
@@ -26,25 +27,32 @@
 	</div>
 
 	<div sec:authorize="isAuthenticated()">
-		<h1>Opciones</h1>
-		<div>
-			<a href="/becados"> Gestión de becados </a>
+		<h1 style="background-color:LightSalmon;"> Opciones</h1>
+		<div class="form-group row">
+			<a href="/becados"  > Gestión de Becados </a>
 		</div>
-		<div>
-			<a href="/socios"> Gestión de socios </a>
+		<div class="form-group row">
+			<a href="/socios"  > Gestión de Socios </a>
 		</div>
-		<div>
-			<a href="/usuario"> Gestión de usuarios </a>
+		<div class="form-group row">
+			<a href="/usuario"  > Gestión de Usuarios </a>
 		</div>
-		<div>
-			<a href="/apadrinamientos"> Gestión de apadrinamientos </a>
+		<div class="form-group row">
+			<a href="/apadrinamientos"  > Gestión de Apadrinamientos </a>
 		</div>
 		
-		<div>
-			<a href="/proyectos"> Gestión de proyectos </a>
+		<div class="form-group row">
+			<a href="/proyectos"  > Gestión de Proyectos </a>
 		</div>
-		<div>
-			<a href="/comunidades"> Gestión de Comunidades </a>
+		<div class="form-group row">
+			<a href="/comunidades"  > Gestión de Comunidades </a>
+		</div>
+		<div class="form-group row">
+			<a href="/economia" > Gestión Económica </a>
+		</div>
+		
+		<div class="form-group row">
+			<a href="/almacen" > Gestión de Bienes </a>
 		</div>
 	</div>
 	
@@ -52,7 +60,7 @@
 
 	<br>
 	
-	<iframe src="http://free.timeanddate.com/clock/i6l2sf3p/n323/tles4/fn7/fs18/fcfff/tc000/ftb/tt0/tw0/tm1/ts1/ta1/tb4"  width="175" height="52"></iframe>
+	
 	
 	
 

@@ -53,8 +53,8 @@
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('dni')}? 'has-error'">
 								<label>DNI</label> <input type="text" 
-									class="form-control input-sm" th:field="*{dni}"
-									autofocus="autofocus" placeholder="DNI" maxlength="15" />
+									class="form-control input-sm" th:field="*{dni}" 
+									autofocus="autofocus" placeholder="DNI" maxlength="15" required  />
 							</div>
 						</div>
 						<div class="form-group row">

@@ -51,7 +51,12 @@
 										<input type="submit" class="primary btn btn-sm btn-primary"
 											value="Editar" />
 									</form>
-
+									
+									<form action="#" id="ConsultForm" th:method="get"
+										th:action="@{/proyectos/consult/{id}(id=${proyecto.id})}">
+										<input type="submit" class="primary btn btn-sm btn-info"
+											value="Consultar" />
+									</form>
 								</div>
 							</td>
 						</tr>

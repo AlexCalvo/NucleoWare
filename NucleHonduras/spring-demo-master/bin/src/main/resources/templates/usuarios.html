@@ -31,9 +31,10 @@
 							<th>Apellidos</th>
 							<th>email</th>
 							<th>Password</th>
-							<th>Fecha_Alta</th>
-							<th>Fecha_Baja</th>
+							<th>fechaAlta</th>
+							<th>fechaBaja</th>
 							<th>Observaciones</th>
+							<th>TipoUsuario</th>
 							<th>Operaciones</th>
 						</tr>
 					</thead>
@@ -43,9 +44,10 @@
 							<td th:text="${usuario.nombre}"></td>
 							<td th:text="${usuario.apellidos}"></td>
 							<td th:text="${usuario.email}"></td>
-							
-							<td th:date="${usuario.fechaAlta}"></td>
-							<td th:date="${usuario.fechaBaja}"></td>
+							<td th:text="${usuario.password}"></td>
+							<td th:text="${usuario.fechaAlta}"></td>
+							<td th:text="${usuario.fechaBaja}"></td>
+							<td th:text="${usuario.tipo}"></td>
 							<td th:text="${usuario.observaciones}"></td>
 							<td>
 								<div class="btn-group">
@@ -62,6 +64,11 @@
 											value="Editar" />
 									</form>
 
+									<form action="#" id="ConsultForm" th:method="get"
+										th:action="@{/usuario/consult/{id}(id=${usuario.id})}">
+										<input type="submit" class="primary btn btn-sm btn-info"
+											value="Consultar" />
+									</form>
 								</div>
 							</td>
 						</tr>
@@ -73,7 +80,7 @@
 			<strong>OK!</strong> El usuario ha sido eliminado correctamente.
 		</div>
 		<div th:if="${delete != null && !delete}" class="alert alert-danger">
-			<strong>Error!</strong> Error eliminado el usuario.
+			<strong>Error!</strong> Error eliminando al usuario.
 		</div>
 		<div th:if="${update != null && update}" class="alert alert-success">
 			<strong>OK!</strong> El usuario ha sido actualizada correctamente.

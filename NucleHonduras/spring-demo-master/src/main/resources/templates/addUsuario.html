@@ -38,7 +38,7 @@
 								th:classappend="${#fields.hasErrors('id')}? 'has-error'">
 								<label>ID</label> <input type="text"
 									class="form-control input-sm" th:field="*{id}"
-									autofocus="autofocus" placeholder="id" maxlength="50" />
+									autofocus="autofocus" placeholder="id" maxlength="50" disabled />
 							</div>
 						</div>
 						
@@ -99,10 +99,10 @@
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('tipo')}? 'has-error'">
 								<label>Tipo</label>  
-									<input type="radio" name="tipo" value="CGENERAL" > CGENERAL
-									<input type="radio" name="tipo" value="COORDINADOR"> COORDINADOR
-									<input type="radio" name="tipo" value="AGENTE"> AGENTE
-									<input type="radio" name="tipo" value="ECONOMICO"> ECONOMICO
+									<input type="radio" required name="tipo" value="CGENERAL" > CGENERAL <br>
+									<input type="radio" required name="tipo" value="COORDINADOR"> COORDINADOR <br>
+									<input type="radio" required name="tipo" value="AGENTE"> AGENTE <br>
+									<input type="radio" required name="tipo" value="ECONOMICO"> ECONOMICO
 
 									<!--class="form-control input-sm" th:field="*{tipo}"-->
 									<!--autofocus="autofocus" placeholder="Tipo" maxlength="50" />-->

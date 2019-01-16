@@ -38,7 +38,7 @@
 								th:classappend="${#fields.hasErrors('id')}? 'has-error'">
 								<label>ID</label> <input type="text"
 									class="form-control input-sm" th:field="*{id}"
-									autofocus="autofocus" placeholder="ID" maxlength="15" />
+									autofocus="autofocus" placeholder="ID" maxlength="15" required />
 							</div>
 						</div>
 						
@@ -47,7 +47,7 @@
 								th:classappend="${#fields.hasErrors('padrino')}? 'has-error'">
 								<label>PADRINO</label> <input type="text"
 									class="form-control input-sm" th:field="*{padrino}"
-									autofocus="autofocus" placeholder="PADRINO" maxlength="15" />
+									autofocus="autofocus" placeholder="PADRINO" maxlength="15" required />
 							</div>
 						</div>
 
@@ -57,7 +57,7 @@
 								th:classappend="${#fields.hasErrors('apadrinado')}? 'has-error'">
 								<label>APADRINADO</label> <input type="text"
 									class="form-control input-sm" th:field="*{apadrinado}"
-									autofocus="autofocus" placeholder="APADRINADO" maxlength="15" />
+									autofocus="autofocus" placeholder="APADRINADO" maxlength="15" required />
 							</div>
 						</div>
 						
@@ -66,7 +66,7 @@
 								th:classappend="${#fields.hasErrors('agente')}? 'has-error'">
 								<label>AGENTE</label> <input type="text"
 									class="form-control input-sm" th:field="*{agente}"
-									autofocus="autofocus" placeholder="AGENTE" maxlength="15" />
+									autofocus="autofocus" placeholder="AGENTE" maxlength="15" required />
 							</div>
 						</div>
 						
