@@ -6,24 +6,30 @@
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width" />
-<title>NucleoWare</title>
+<title>NucleHonduras</title>
 </head>
 <body>
  
 	<br>
 	<div sec:authorize="isAuthenticated()">
 		<div>
-		<h1 style="background-color:LightSalmon;"> Bienvenido a NucleoWare, estás logueado con el usuario <b sec:authentication="name"></b></h1>
+		<img src="https://github.com/AlexCalvo/NucleoWare/blob/master/NucleHonduras/spring-demo-master/src/main/resources/templates/images/NucleHonduras.png?raw=true" border="3" alt="NUCLEHONDURAS" width="200" height="200">
+		
+		<h1 style="background-color:LightSalmon;"> Bienvenido a NucleHonduras, estás logueado con el usuario <b sec:authentication="name"></b></h1>
 			<b sec:authentication="name"></b>
+			
 		</div>
 		<form th:action="@{/logout}" method="post">
 			<input type="submit" value="Logout" />
 		</form>
+		
 	</div>
 
 	<div sec:authorize="isAnonymous()">
 		<div>No estás logueado</div>
 		<a href="/login">Login</a>
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKzq63DoXkQRcAwO8BRHH63b-IN9ohWSmqRW7ppqXOGanzEnwn" border="0" alt="acoes" width="200" height="200">
+		
 	</div>
 
 	<div sec:authorize="isAuthenticated()">

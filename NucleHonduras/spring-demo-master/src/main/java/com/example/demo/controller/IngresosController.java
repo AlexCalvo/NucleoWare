@@ -29,6 +29,13 @@ public class IngresosController {
 		return "ingresos";
 	}
 	
+	@GetMapping("/economia")
+	public String listEconomyView(Model model) {
+		model.addAttribute("economia", ingresosService.getAll());
+		
+		return "economia";
+	}
+	
 	@GetMapping("/ingresos/add")
 	public String addPersonView(Ingresos ingreso, Model model) {
 		model.addAttribute("ingresos", ingresosService.getAll());
