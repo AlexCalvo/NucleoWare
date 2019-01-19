@@ -5,7 +5,7 @@
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width" />
-<title>Nuevo Ingreso</title>
+<title>Nuevo Gasto</title>
 <!-- jQuery library -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -18,11 +18,11 @@
 <body>
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<strong>Nuevo Ingreso</strong>
+			<strong>Nuevo Gasto</strong>
 		</div>
 		<div class="panel-body">
-			<form class="form-horizontal" action="#" th:object="${ingreso}"
-				th:action="@{/ingresos}" method="POST" style="margin: 10px">
+			<form class="form-horizontal" action="#" th:object="${gasto}"
+				th:action="@{/gastos}" method="POST" style="margin: 10px">
 				<div class="form-group">
 					<fieldset>
 						<div class="form-group row">
@@ -41,6 +41,16 @@
 									autofocus="autofocus" placeholder="ID" maxlength="15" />
 							</div>
 						</div>
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('isVerified')}? 'has-error'">
+								<label>isVerified</label>  
+									<input type="radio" required name="isVerified" value="SI" > SI<br>
+									<input type="radio" required name="isVerified" value="NO"> NO
+									<!--class="form-control input-sm" th:field="*{isVerified}"-->
+									<!--autofocus="autofocus" placeholder="isVerified" maxlength="50" />-->
+							</div>
+						</div>
 						
 						<div class="form-group row">
 							<div class="col-md-4"
@@ -53,12 +63,12 @@
 						
 						<div class="form-group row">
 							<div class="col-md-4"
-								th:classappend="${#fields.hasErrors('procedencia')}? 'has-error'">
-								<label>Procedencia</label>  
-									<input type="radio" required name="procedencia" value="SOCIO" > SOCIO<br>
-									<input type="radio" required name="procedencia" value="ANONIMO"> ANONIMO
-									
-									<!--class="form-control input-sm" th:field="*{procedencia}"-->
+								th:classappend="${#fields.hasErrors('destinatario')}? 'has-error'">
+								<label>Destinario</label>  
+									<input type="radio" required name="destinatario" value="PROYECTO" > PROYECTO<br>
+									<input type="radio" required name="destinatario" value="COMUNIDAD"> COMUNIDAD
+									<input type="radio" required name="destinatario" value="BECADO"> BECADO
+									<!--class="form-control input-sm" th:field="*{tipo}"-->
 									<!--autofocus="autofocus" placeholder="Tipo" maxlength="50" />-->
 							</div>
 						</div>
@@ -85,7 +95,7 @@
 				</div>
 				<div class="form-group row">
 					<button type="submit" class="btn btn-sm btn-primary">Guardar</button>
-					<a th:href="@{/ingresos}" class="btn btn-sm btn-default">Cancelar</a>
+					<a th:href="@{/gastos}" class="btn btn-sm btn-default">Cancelar</a>
 				</div>
 			</form>
 		</div>
