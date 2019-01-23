@@ -20,6 +20,12 @@
 		<div class="panel-heading">
 			<strong>Gastos</strong>
 		</div>
+		<form>
+  <div>
+    <input type="search" id="miBusqueda" name="q">
+    <button>Buscar</button>
+  </div>
+</form>
 		<div class="panel-body">
 			<div class="table-responsive">
 				<table
@@ -50,6 +56,12 @@
 										th:action="@{/gastos/{id}(id=${gasto.id})}">
 										<input type="submit" class="delete btn btn-sm btn-danger"
 											value="Eliminar" />
+									</form>
+									
+									<form action="#" id="editForm" th:method="get"
+										th:action="@{/gastos/edit/{id}(id=${gasto.id})}">
+										<input type="submit" class="primary btn btn-sm btn-primary"
+											value="Validar" />
 									</form>
 
 									

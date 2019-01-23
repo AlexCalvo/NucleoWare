@@ -5,7 +5,7 @@
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width" />
-<title>Nuevo Gasto</title>
+<title>Validar Gasto</title>
 <!-- jQuery library -->
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -18,13 +18,11 @@
 <body>
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<strong>Nuevo Gasto</strong>
+			<strong>Validar Gastos</strong>
 		</div>
-		<form>
-  
 		<div class="panel-body">
 			<form class="form-horizontal" action="#" th:object="${gasto}"
-				th:action="@{/gastos}" method="POST" style="margin: 10px">
+				th:action="@{/gastos/edit}" method="post" style="margin: 10px">
 				<div class="form-group">
 					<fieldset>
 						<div class="form-group row">
@@ -34,36 +32,34 @@
 								</div>
 							</div>
 						</div>
-						
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('id')}? 'has-error'">
-								<label>ID</label> <input type="text" required
+								<label>ID</label> <input type="text"
 									class="form-control input-sm" th:field="*{id}"
-									autofocus="autofocus" placeholder="ID" maxlength="15" />
+									autofocus="autofocus" placeholder="ID" maxlength="15" disabled />
 							</div>
 						</div>
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('isVerified')}? 'has-error'">
 								<label>isVerified</label>  
-									<input type="radio" required name="isVerified" value="SI" > SI<br>
-									<input type="radio" required name="isVerified" value="NO" checked> NO 
+									<input type="radio" required name="isVerified" value="SI" > SI <br>
+									
 									<!--class="form-control input-sm" th:field="*{isVerified}"-->
 									<!--autofocus="autofocus" placeholder="isVerified" maxlength="50" />-->
 							</div>
 						</div>
-						
-						<div class="form-group row">
+
+				<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('fecha')}? 'has-error'">
 								<label>FECHA</label> <input type="date"
 									class="form-control input-sm" th:field="*{fecha}"
-									autofocus="autofocus" placeholder="FECHA" maxlength="250" />
+									autofocus="autofocus" placeholder="FECHA" maxlength="250" disabled />
 							</div>
 						</div>
-						
-						<div class="form-group row">
+							<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('destinatario')}? 'has-error'">
 								<label>Destinario</label>  
@@ -74,25 +70,26 @@
 									<!--autofocus="autofocus" placeholder="Tipo" maxlength="50" />-->
 							</div>
 						</div>
-						
-						<div class="form-group row">
+							<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('cantidad')}? 'has-error'">
 								<label>Cantidad</label> <input type="text"
 									class="form-control input-sm" th:field="*{cantidad}"
-									autofocus="autofocus" placeholder="CANTIDAD" maxlength="250" />
+									autofocus="autofocus" placeholder="CANTIDAD" maxlength="250" disabled />
 							</div>
 						</div>
-
 						
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('descripcion')}? 'has-error'">
 								<label>DESCRIPCION</label> <input type="text"
 									class="form-control input-sm" th:field="*{descripcion}"
-									autofocus="autofocus" placeholder="DESCRIPCION" maxlength="250" />
+									autofocus="autofocus" placeholder="DESCRIPCION" maxlength="250" disabled />
 							</div>
 						</div>
+						
+						
+						
 					</fieldset>
 				</div>
 				<div class="form-group row">
