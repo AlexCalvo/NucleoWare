@@ -20,8 +20,6 @@
 		<div class="panel-heading">
 			<strong>Nuevo Gasto</strong>
 		</div>
-		<form>
-  
 		<div class="panel-body">
 			<form class="form-horizontal" action="#" th:object="${gasto}"
 				th:action="@{/gastos}" method="POST" style="margin: 10px">
@@ -47,7 +45,7 @@
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('isVerified')}? 'has-error'">
 								<label>isVerified</label>  
-									<input type="radio" required name="isVerified" value="SI" > SI<br>
+									<input type="radio" required name="isVerified" value="SI" disabled> SI<br>
 									<input type="radio" required name="isVerified" value="NO" checked> NO 
 									<!--class="form-control input-sm" th:field="*{isVerified}"-->
 									<!--autofocus="autofocus" placeholder="isVerified" maxlength="50" />-->

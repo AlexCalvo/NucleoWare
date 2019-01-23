@@ -66,7 +66,7 @@ public class ProyectosController {
 	public String update(@Valid Proyectos proyecto, BindingResult result, Model model) {
 		try {
 			proyectosService.update(proyecto);
-			model.addAttribute("udpate", true);
+			model.addAttribute("update", true);
 		} catch (Exception er) {
 			model.addAttribute("update", false);
 		}

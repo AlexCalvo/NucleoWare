@@ -78,20 +78,23 @@
 				</table>
 			</div>
 		</div>
-		<div th:if="${delete != null && delete}" class="alert alert-success">
-			<strong>OK!</strong> La comunidad ha sido eliminada correctamente.
+			<div th:if="${delete != null && delete}" class="alert alert-success">
+			<strong>OK!</strong>La comunidad ha sido eliminado correctamente.
 		</div>
 		<div th:if="${delete != null && !delete}" class="alert alert-danger">
+
 			<strong>Error!</strong> Error eliminando la comunidad.
 		</div>
 		<div th:if="${update != null && update}" class="alert alert-success">
-			<strong>OK!</strong> La comunidad ha sido actualizada correctamente.
+			<strong>OK!</strong> La comunidad ha sido actualizado correctamente.
+
 		</div>
+		
 		<div th:if="${update != null && !update}" class="alert alert-danger">
-			<strong>Error!</strong> Error al actualizar la comunidad.
+			<strong>Error!</strong> No se ha actualizado la comunidad.
 		</div>
 		<div th:if="${create != null && create}" class="alert alert-success">
-			<strong>OK!</strong> La comunidad ha sido creada correctamente.
+			<strong>OK!</strong> La comunidad ha sido creado correctamente.
 		</div>
 		<div th:if="${create != null && !create}" class="alert alert-danger">
 			<strong>Error!</strong> Error al crear la comunidad.

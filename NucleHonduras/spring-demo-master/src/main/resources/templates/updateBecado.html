@@ -26,7 +26,7 @@
 				<div class="form-group">
 					<fieldset>
 						
-						<div class="form-group row">
+					<div class="form-group row">
 							<div class="alert alert-danger" th:if="${#fields.hasAnyErrors()}">
 								<div th:each="detailedError : ${#fields.detailedErrors()}">
 									<span th:text="${detailedError.message}"></span>
@@ -34,15 +34,16 @@
 							</div>
 						</div>
 						
+						
+						
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('nombre')}? 'has-error'">
-								<label>Nombre</label> <input type="text"
+								<label>Nombre</label> <input type="text" 
 									class="form-control input-sm" th:field="*{nombre}"
-									autofocus="autofocus" placeholder="Nombre" maxlength="50" />
+									autofocus="autofocus" placeholder="Nombre" maxlength="50"  />
 							</div>
 						</div>
-						
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('apellido')}? 'has-error'">
@@ -51,29 +52,33 @@
 									autofocus="autofocus" placeholder="Apellidos" maxlength="50" />
 							</div>
 						</div>
-
+						
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('id')}? 'has-error'">
-								<label>ID</label> <input type="text"
+								<label>ID</label> <input type="text" name="id" 
 									class="form-control input-sm" th:field="*{id}"
-									autofocus="autofocus" placeholder="id" maxlength="15" disabled />
+									autofocus="autofocus" placeholder="id" maxlength="15" required  />
 							</div>
 						</div>
+						
+						
+
+						
 						
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('fecha_nacimiento')}? 'has-error'">
 								<label>Fecha_Nacimiento</label> <input type="date"
 									class="form-control input-sm" th:field="*{fecha_nacimiento}"
-									autofocus="autofocus" placeholder="Fecha_Nacimiento" maxlength="15" />
+									autofocus="autofocus" placeholder="FECHA_NACIMIENTO" maxlength="15" />
 							</div>
 						</div>
 						
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('fecha_ingreso_acoes')}? 'has-error'">
-								<label>Fecha_Ingreso_Acoes</label> <input type="date"
+								<label>Fecha_ingreso_acoes</label> <input type="date"
 									class="form-control input-sm" th:field="*{fecha_ingreso_acoes}"
 									autofocus="autofocus" placeholder="fecha_ingreso_acoes" maxlength="15" />
 							</div>
@@ -82,7 +87,7 @@
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('fecha_ingreso_proyecto')}? 'has-error'">
-								<label>Fecha_Ingreso_Proyecto</label> <input type="date"
+								<label>Fecha_ingreso_proyecto</label> <input type="date"
 									class="form-control input-sm" th:field="*{fecha_ingreso_proyecto}"
 									autofocus="autofocus" placeholder="fecha_ingreso_proyecto" maxlength="15" />
 							</div>
@@ -91,18 +96,17 @@
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('fecha_salida_proyecto')}? 'has-error'">
-								<label>Fecha_Salida_Proyecto</label> <input type="date"
+								<label>Fecha_salida_proyecto</label> <input type="date"
 									class="form-control input-sm" th:field="*{fecha_salida_proyecto}"
 									autofocus="autofocus" placeholder="fecha_salida_proyecto" maxlength="15" />
 							</div>
 						</div>
-						
-							<div class="form-group row">
+						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('notaMedia')}? 'has-error'">
 								<label>NotaMedia</label> <input type="text"
 									class="form-control input-sm" th:field="*{notaMedia}"
-									autofocus="autofocus" placeholder="notaMedia" maxlength="250" />
+									autofocus="autofocus" placeholder="notaMedia" maxlength="5" />
 							</div>
 						</div>
 						<div class="form-group row">
@@ -117,12 +121,11 @@
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('proyecto')}? 'has-error'">
-								<label>Proyecto</label> <input type="text"
+								<label>Proyecto</label> <input type="text" 
 									class="form-control input-sm" th:field="*{proyecto}"
 									autofocus="autofocus" placeholder="proyecto" maxlength="15" />
 							</div>
 						</div>
-						
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('comunidad')}? 'has-error'">
@@ -130,9 +133,7 @@
 									class="form-control input-sm" th:field="*{comunidad}"
 									autofocus="autofocus" placeholder="comunidad" maxlength="15" />
 							</div>
-						</div>
-						
-						
+						</div>	
 					</fieldset>
 				</div>
 				<div class="form-group row">

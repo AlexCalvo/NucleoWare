@@ -32,64 +32,65 @@
 								</div>
 							</div>
 						</div>
+						
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('id')}? 'has-error'">
-								<label>ID</label> <input type="text"
+								<label>ID</label> <input type="text" required
 									class="form-control input-sm" th:field="*{id}"
-									autofocus="autofocus" placeholder="ID" maxlength="15" disabled />
+									autofocus="autofocus" placeholder="ID" maxlength="15"/>
 							</div>
 						</div>
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('isVerified')}? 'has-error'">
 								<label>isVerified</label>  
-									<input type="radio" required name="isVerified" value="SI" > SI <br>
-									
+									<input type="radio" required name="isVerified" value="SI" checked> SI<br>
+									<input type="radio" required name="isVerified" value="NO" > NO 
 									<!--class="form-control input-sm" th:field="*{isVerified}"-->
 									<!--autofocus="autofocus" placeholder="isVerified" maxlength="50" />-->
 							</div>
 						</div>
-
-				<div class="form-group row">
+						
+						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('fecha')}? 'has-error'">
 								<label>FECHA</label> <input type="date"
 									class="form-control input-sm" th:field="*{fecha}"
-									autofocus="autofocus" placeholder="FECHA" maxlength="250" disabled />
+									autofocus="autofocus" placeholder="FECHA" maxlength="250"/>
 							</div>
 						</div>
-							<div class="form-group row">
+						
+						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('destinatario')}? 'has-error'">
 								<label>Destinario</label>  
-									<input type="radio" required name="destinatario" value="PROYECTO" > PROYECTO<br>
+									<input type="radio" required name="destinatario" value="PROYECTO"> PROYECTO<br>
 									<input type="radio" required name="destinatario" value="COMUNIDAD"> COMUNIDAD
 									<input type="radio" required name="destinatario" value="BECADO"> BECADO
 									<!--class="form-control input-sm" th:field="*{tipo}"-->
 									<!--autofocus="autofocus" placeholder="Tipo" maxlength="50" />-->
 							</div>
 						</div>
-							<div class="form-group row">
+						
+						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('cantidad')}? 'has-error'">
 								<label>Cantidad</label> <input type="text"
 									class="form-control input-sm" th:field="*{cantidad}"
-									autofocus="autofocus" placeholder="CANTIDAD" maxlength="250" disabled />
+									autofocus="autofocus" placeholder="CANTIDAD" maxlength="250" />
 							</div>
 						</div>
+
 						
 						<div class="form-group row">
 							<div class="col-md-4"
 								th:classappend="${#fields.hasErrors('descripcion')}? 'has-error'">
 								<label>DESCRIPCION</label> <input type="text"
 									class="form-control input-sm" th:field="*{descripcion}"
-									autofocus="autofocus" placeholder="DESCRIPCION" maxlength="250" disabled />
+									autofocus="autofocus" placeholder="DESCRIPCION" maxlength="250"/>
 							</div>
 						</div>
-						
-						
-						
 					</fieldset>
 				</div>
 				<div class="form-group row">

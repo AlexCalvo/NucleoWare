@@ -66,7 +66,7 @@ public class ComunidadesController {
 	public String update(@Valid Comunidades comunidad, BindingResult result, Model model) {
 		try {
 			comunidadesService.update(comunidad);
-			model.addAttribute("udpate", true);
+			model.addAttribute("update", true);
 		} catch (Exception er) {
 			model.addAttribute("update", false);
 		}

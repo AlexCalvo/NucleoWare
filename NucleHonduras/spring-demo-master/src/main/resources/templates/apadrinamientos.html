@@ -83,13 +83,16 @@
 			<strong>OK!</strong> El apadrinamiento ha sido eliminado correctamente.
 		</div>
 		<div th:if="${delete != null && !delete}" class="alert alert-danger">
+
 			<strong>Error!</strong> Error eliminando el apadrinamiento.
 		</div>
 		<div th:if="${update != null && update}" class="alert alert-success">
-			<strong>OK!</strong> El apadrinamiento ha sido actualizada correctamente.
+			<strong>OK!</strong> El apadrinamiento ha sido actualizado correctamente.
+
 		</div>
+		
 		<div th:if="${update != null && !update}" class="alert alert-danger">
-			<strong>Error!</strong> Error al actualizar el apadrinamiento.
+			<strong>Error!</strong> No se ha actualizado el apadrinamiento.
 		</div>
 		<div th:if="${create != null && create}" class="alert alert-success">
 			<strong>OK!</strong> El apadrinamiento ha sido creado correctamente.

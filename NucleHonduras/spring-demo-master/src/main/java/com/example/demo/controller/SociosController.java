@@ -39,9 +39,9 @@ public class SociosController {
 
 	/*---Devuelve el formulario para editar una persona---*/
 	@GetMapping("/socios/edit/{dni}")
-	public String editPersonView(@PathVariable("dni") String id, Model model) {
-		model.addAttribute("dni", id);
-		model.addAttribute("socios", socioService.getByDni(id));
+	public String editPersonView(@PathVariable("dni") String dni, Model model) {
+		model.addAttribute("dni", dni);
+		model.addAttribute("socio", socioService.getByDni(dni));
 		return "updateSocio";
 	}
 	
@@ -69,7 +69,7 @@ public class SociosController {
 	public String update(@Valid Socios socio, BindingResult result, Model model) {
 		try {
 			socioService.update(socio);
-			model.addAttribute("udpate", true);
+			model.addAttribute("update", true);
 		} catch (Exception er) {
 			model.addAttribute("update", false);
 		}

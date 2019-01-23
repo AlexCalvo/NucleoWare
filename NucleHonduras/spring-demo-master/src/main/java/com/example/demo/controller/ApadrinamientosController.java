@@ -66,7 +66,7 @@ public class ApadrinamientosController {
 	public String update(@Valid Apadrinamientos a, BindingResult result, Model model) {
 		try {
 			apService.update(a);
-			model.addAttribute("udpate", true);
+			model.addAttribute("update", true);
 		} catch (Exception er) {
 			model.addAttribute("update", false);
 		}
