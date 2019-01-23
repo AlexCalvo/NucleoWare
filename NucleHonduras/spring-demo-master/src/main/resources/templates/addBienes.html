@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Nuevo Bien</title>
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet"></link>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<strong>Nuevo Bien</strong>
+		</div>
+		<div class="panel-body">
+			<form class="form-horizontal" action="#" th:object="${bien}"
+				th:action="@{/bienes}" method="POST" style="margin: 10px">
+				<div class="form-group">
+					<fieldset>
+						<div class="form-group row">
+							<div class="alert alert-danger" th:if="${#fields.hasAnyErrors()}">
+								<div th:each="detailedError : ${#fields.detailedErrors()}">
+									<span th:text="${detailedError.message}"></span>
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('id')}? 'has-error'">
+								<label>ID</label> <input type="text" name="id" 
+									class="form-control input-sm" th:field="*{id}"
+									autofocus="autofocus" placeholder="id" maxlength="15" required  />
+							</div>
+						</div>
+						
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('tipo')}? 'has-error'">
+								<label>Tipo</label>
+									<input type="radio" name="tipo" value="MEDICAMENTOS">MEDICAMENTOS <br>
+									<input type="radio" name="tipo" value="COMIDA" checked> COMIDA
+									<input type="radio" name="tipo" value="ROPA"> ROPA
+									
+									<!--class="form-control input-sm" th:field="*{tipo}"-->
+									<!--autofocus="autofocus" placeholder="Tipo" maxlength="50" />-->
+							</div>
+						</div>
+
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('cantidad')}? 'has-error'">
+								<label>Cantidad</label> <input type="text"
+									class="form-control input-sm" th:field="*{cantidad}"
+									autofocus="autofocus" placeholder="cantidad" maxlength="5" />
+							</div>
+						</div>
+						
+						
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('fecha')}? 'has-error'">
+								<label>Fecha</label> <input type="date"
+									class="form-control input-sm" th:field="*{fecha}"
+									autofocus="autofocus" placeholder="FECHA" maxlength="15" />
+							</div>
+						</div>
+						
+						
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('procedencia')}? 'has-error'">
+								<label>Procedencia</label> <input type="text"
+									class="form-control input-sm" th:field="*{procedencia}"
+									autofocus="autofocus" placeholder="procedencia" maxlength="250" />
+							</div>
+						</div>
+						
+						<div class="form-group row">
+							<div class="col-md-4"
+								th:classappend="${#fields.hasErrors('descripcion')}? 'has-error'">
+								<label>Descripcion</label> <input type="text"
+									class="form-control input-sm" th:field="*{descripcion}"
+									autofocus="autofocus" placeholder="descripcion" maxlength="250" />
+							</div>
+						</div>
+						
+					</fieldset>
+				</div>
+				<div class="form-group row">
+					<button type="submit" class="btn btn-sm btn-primary">Guardar</button>
+					<a th:href="@{/bienes}" class="btn btn-sm btn-default">Cancelar</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
